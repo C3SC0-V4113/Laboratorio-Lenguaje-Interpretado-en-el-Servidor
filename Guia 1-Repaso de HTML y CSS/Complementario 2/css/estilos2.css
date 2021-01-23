@@ -1,0 +1,31 @@
+h1{
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+}
+div.contenido{
+    margin: 0 auto;
+    width: 80%;
+}
+p{
+    font-size: 18px;
+}
+.cuento{
+    color: navy;
+    text-align: justify;
+}
+.parrafo1{
+    font-family: 'Courier New', Courier, monospace;
+}
+.parrafo2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.parrafo3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+div.autor{
+    font-style: italic;
+}
+p.julio{
+    font-size: 14px;
+}
