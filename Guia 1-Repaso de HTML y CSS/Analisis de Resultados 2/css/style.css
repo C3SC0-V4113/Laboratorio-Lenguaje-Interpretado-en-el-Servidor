@@ -1,0 +1,54 @@
+body,html{
+    margin: 0;
+    height: 100%;
+}
+
+#cabecera-parallax{
+    background-image: url('../img/580b57fbd9996e24bc43be0f.png');
+    height: 75%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    background-color: #9852f9;
+}
+
+#titulo{
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+#titulo #letra{
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+#principal{
+    width: 100%;
+}
+#contenido{
+    padding: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+#footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #F7F7FF;
+    color: #303030;
+}
+#footer p{
+    margin: 20px;
+    padding: 0 10px;
+}
