@@ -32,6 +32,7 @@ tr:nth-child(odd){
     background-color: #6023BC;
 }
 #tabla #encabezados-tabla{
+    background-color: #6023BC;
     text-align: center;
 }
 #tabla #encabezados-tabla #primero{
