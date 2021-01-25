@@ -3,17 +3,19 @@ body,html{
     height: 100%;
 }
 
-#cabecera-parallax{
-    background-image: url('../img/580b57fbd9996e24bc43be0f.png');
-    height: 75%; 
+.parallax{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-size: contain;
     background-color: #9852f9;
+    background-image: url('../img/580b57fbd9996e24bc43be0f.png');
+    height: 100%; 
 }
-
+#interno{
+    height: 35%;
+}
 #titulo{
     position: absolute;
     width: 100%;
@@ -34,8 +36,8 @@ body,html{
 }
 #contenido{
     padding: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 h1{
     text-align: center;
@@ -45,10 +47,10 @@ h1{
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #F7F7FF;
-    color: #303030;
+    background-color: #27045b;
+    color: #ffffff;
 }
 #footer p{
     margin: 20px;
-    padding: 0 10px;
+    padding: 20px 20px;
 }
