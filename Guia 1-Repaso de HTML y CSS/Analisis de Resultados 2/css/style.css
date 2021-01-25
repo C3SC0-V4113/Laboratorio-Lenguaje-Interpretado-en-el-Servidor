@@ -1,0 +1,66 @@
+body,html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    height: 100%;
+}
+
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    background-color: #9852f9;
+    background-image: url('../img/580b57fbd9996e24bc43be0f.png');
+    height: 100%; 
+}
+#interno{
+    height: 35%;
+}
+#titulo{
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+#titulo #letra{
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+#principal{
+    width: 100%;
+}
+@media (min-width: 1001px) {
+    #contenido{
+        padding: 50px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+  }
+@media (max-width: 1000px) {
+    #contenido{
+        padding: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  }
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+#footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #27045b;
+    color: #ffffff;
+}
+#footer p{
+    margin: 20px;
+    padding: 20px 20px;
+}
