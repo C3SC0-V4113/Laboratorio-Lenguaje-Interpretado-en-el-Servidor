@@ -1,4 +1,5 @@
 body,html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     height: 100%;
 }
@@ -34,11 +35,20 @@ body,html{
 #principal{
     width: 100%;
 }
-#contenido{
-    padding: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
-}
+@media (min-width: 1001px) {
+    #contenido{
+        padding: 50px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+  }
+@media (max-width: 1000px) {
+    #contenido{
+        padding: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  }
 h1{
     text-align: center;
     text-transform: uppercase;
