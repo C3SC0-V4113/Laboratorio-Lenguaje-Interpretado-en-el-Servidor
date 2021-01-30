@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body        {
+    /* rgb(255,228,196) o #FFE4C4 */
+    background-color: Bisque; 
+    font-size:16px;
+}
+
+header {
+    background-image:url(../img/brickwall.jpg);
+    background-repeat:repeat-x;
+    /* height: 134px; */
+    padding: 20px;
+    width: 100%;
+
+    /* Propiedades flex */
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header h1 {
+    color: #fff;
+    font: bold 48px Arial,Helvetica,"Liberation Sans";
+    text-align: center;
+    text-shadow: 1px 1px #fe4903,
+                 2px 2px #fe4903,
+                 3px 3px #fe4903;
+    transition: all 0.12s ease-out;
+}
+
+header h1:hover {
+    position: relative;
+    text-shadow: 1px 1px #fe4903,
+                 2px 2px #fe4903,
+                 3px 3px #fe4903,
+                 4px 4px #fe4903,
+                 5px 5px #fe4903,
+                 6px 6px #fe4903;
+}
+
+.wrap {
+    margin: auto;
+    width: 100%;
+
+    /* Propiedades flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Forma resumida */
+    /* flex-flow: row wrap; */
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%;
+
+    /* Propiedades flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main article {
+    display: flex;
+    flex-grow: 1;
+    margin: 5px;
+    padding: 12px;
+}
+
+.main #html {
+    background:Maroon;
+    border-radius:0.5em;
+    flex: 1;
+}
+
+.main #php {
+    background:OrangeRed;
+    border-radius:0.5em;
+    flex: 1;
+}
+
+.main #html .text {
+    color:LemonChiffon;  /* rgb(255,250,205) o #FFFACD */
+    font-family:"Palatino Linotype",Baskerville,serif;
+    font-weight:600;
+    font-size:1.2em;
+    vertical-align: top;
+    flex: 3;
+}
+
+.main #html .img {
+    vertical-align: top;
+    height: auto;
+    flex: 1;
+}
+
+.main #php .text {
+    color:Bisque;  /* rgb(255,228,196) o #FFE4C4 */
+    display: inline-block;
+    font-family:Tahoma,Verdana,Helvetica,sans-serif;
+    font-weight:900;
+    font-size:1.2em;
+    vertical-align: top;
+    flex: 3;
+}
+
+.main #php .img {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    flex: 1;
+}
+
+@media screen and (max-width: 960px) and (min-width: 480px) {
+    header h1 {
+        font-size: 42px;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .main #html {
+        padding: 16px;
+    }
+    .main #php {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 36px;
+    }
+    .main #html {
+        flex-direction: column;
+    }
+    .main #php {
+        flex-direction: column;
+    }
+    .main #html .text {
+        margin: auto;
+    }
+    .main #html .img {
+        margin: auto;
+    }
+    .main #php .text {
+        margin: auto;
+    }
+    .main #php .img {
+        margin: auto;
+    }
+    .main {
+        flex-direction: column-reverse;
+    }
+}
