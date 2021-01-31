@@ -1,0 +1,89 @@
+/********************************
+*    Estilos para las tablas    *
+********************************/
+body                     {
+    font: 16px;
+}
+
+caption                  {
+    font-size: 1.2em;
+}
+
+/* Estilos ocupados en el ejemplo de formularios */
+#hor-zebra               {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 0.85em;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#hor-zebra th            {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.6em;
+	padding: 10px 8px;
+	color: #039;
+}
+
+#hor-zebra td            {
+	color: #669;
+	line-height: 1.6em;
+	padding: 0.2em;
+}
+
+#hor-zebra .thead        {
+    background: #2e3d66;
+}
+
+#hor-zebra .thead th     {
+    padding: 10px 8px;
+    color: #fcec33;
+    font:Bold 0.85em "Lucida Sans Unicode", Helvetica, Sans-Serif;
+}
+
+#hor-zebra .odd          {
+	background: #e8edff; 
+}
+
+.button-link {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.button-link:link {
+    font-family: 'Nobile';
+    margin: 45px;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+
+.button-link:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
