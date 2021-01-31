@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+   <title>Formulario de ingreso de datos</title>
+   <link rel="stylesheet" href="css/forms.css" />
+   <script src="js/validar.js"></script>
+   <script src="js/modernizr.custom.lis.js"></script>
+</head>
+<body>
+   <header>
+      <h1>Ingreso los dolares a convertir en euros</h1>
+   </header>
+   <section>
+      <article>
+         <form action="procesar.php" method="POST">
+            <label>Dolares:</label>
+            <input type="number" name="dollar" id="dollar">
+            <span id="numbersOnly">Ingrese números enteros</span>
+            <input type="submit" id="enviar" name="submit" value="Enviar" class="submit" />
+         </form>
+      </article>
+   </section>
+</body>
+</html>
