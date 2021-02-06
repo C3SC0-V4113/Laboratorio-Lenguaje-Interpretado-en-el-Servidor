@@ -1,0 +1,123 @@
+/* Fuentes especiales */
+@font-face {
+    font-family: 'League-Gothic';
+    src: url('../fonts/leaguegothic/League_Gothic.eot');
+    src: url('../fonts/leaguegothic/League_Gothic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic/League_Gothic.woff') format('woff'),
+         url('../fonts/leaguegothic/League_Gothic.ttf') format('truetype'),
+         url('../fonts/leaguegothic/League_Gothic.svg#League-Gothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Archivo: salario.css */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body              {
+   background-image: url(../bg/purple-violet.jpg);
+   background-size: 100vw 100vh;
+   background-attachment: fixed;
+   font-size: 16px;
+}
+
+#inset            {
+    padding: 8px;
+}
+
+#inset h1                {
+    color: #ccc;
+    font-family: "League-Gothic", Courier;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px #666;
+}
+
+h3 {
+    color: #c3c6c3;
+    font-size: 1.6em;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgb(223, 227, 229), 
+                 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+#numbersonly,
+#othernumbersonly,
+#integersonly,
+#alfabeticchars   {
+    font:Bold 0.8em Arial,Helvetica,sans-serif;
+    color:Gold;
+    background: -moz-linear-gradient(45deg, rgb(209,50,53) 30%, rgb(253,46,53) 81%);
+    background: -webkit-linear-gradient(45deg, rgb(209,50,53) 30%, rgb(253,46,53) 81%);
+    background: -o-linear-gradient(45deg, rgb(209,50,53) 30%, rgb(253,46,53) 81%);
+    background: -ms-linear-gradient(45deg, rgb(209,50,53) 30%, rgb(253,46,53) 81%);
+    background: linear-gradient(135deg, rgb(209,50,53) 30%, rgb(253,46,53) 81%);
+    background: rgb(209,50,53);
+    padding: 4px 3px;
+    visibility:hidden;
+    display:block;
+}
+
+#background.source-image   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:-100;
+}
+
+#empleado         {
+    width:36%;
+    min-width:350px;
+    min-height:600px;
+    margin:0 auto;
+}
+
+/* Estilos para la boleta de pago */
+/* div               {
+    margin:0 auto;
+    width:26%;
+}
+div h1            {
+    color:Green;
+    font:bold 1.4em Arial,Helvetica,sans-serif;
+} */
+div .number       {
+    color:#def;
+    font-weight:bold;
+    text-align:center;
+}
+
+div .detail       {
+    color:#2f1036;
+    font-weight:bold;
+    text-align:left;
+}
+
+div table         {
+    margin: 0 auto;
+    width:48%;
+}
+
+div table th      {
+    background-color:#6c3082;
+    color: #fff;
+    font:bold 0.8em Arial,Helvetica,sans-serif;
+    padding: 5px 3px;
+}
+
+div table td      {
+    background-color:#EDFA90;
+    font:bold 0.8em Arial,Helvetica,sans-serif;
+    padding: 5px 3px;
+}
