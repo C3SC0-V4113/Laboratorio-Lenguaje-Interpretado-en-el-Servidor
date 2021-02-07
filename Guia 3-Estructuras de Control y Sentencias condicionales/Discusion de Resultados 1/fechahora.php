@@ -18,9 +18,36 @@
                 $fechanacimiento=new DateTime($fechainic);
                 $fechaactual = new DateTime("now");
                 $interval = date_diff($fechaactual, $fechanacimiento);
-                $y= $interval->format('%y Años');
-                $m= $interval->format('%m Meses');
-                $d= $interval->format('%d Dias');
+                //Años
+                if (intval($interval->format('%y'))>0) {
+                    $y= $interval->format('%y Años');
+                    if (intval($interval->format('%y'))==1) {
+                        $y= "1 Año";
+                    }
+                }
+                else {
+                    $y="";
+                }
+                //Meses
+                if (intval($interval->format('%m'))>0) {
+                    $m= $interval->format('%m Meses');
+                    if (intval($interval->format('%m'))==1) {
+                        $m= "1 Mes";
+                    }
+                }
+                else {
+                    $m="";
+                }
+                //Dias
+                if (intval($interval->format('%d'))>0) {
+                    $d= $interval->format('%d Dias');
+                    if (intval($interval->format('%d'))==1) {
+                        $d= "1 Dia";
+                    }
+                }
+                else {
+                    $d="";
+                }
                 echo "<p>$y $m $d</p>";
                 echo "<div class=\"boton\">";
                 echo "\t<a id=\"button\" href=\"nacimiento.html\">Regresar</a>";
