@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingrese su fecha de nacimiento</title>
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Descubre tu edad exacta</h1>
+    </div>
+    <div class="contenido">
+        <form action="fechahora.php" name="fecha" id="fecha" method="post">
+            <div class="titulo">
+                <h2>Ingrese su fecha de nacimiento</h2>
+            </div>
+            <div class="formulario">
+                <input type="date" name="fechainic" id="fechainic" required>
+            </div>
+            <div class="submit">
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                <input type="reset" name="reset" id="reset" value="Restablecer">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/validacion.js"></script>
+</html>
