@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%
+}
+
+body{
+    background-image: url(../img/luna.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    /*margin-left:50px;
+    margin-right:50px;*/
+    overflow:hidden;
+}
+
+p.bisiesto                 {
+   background:#F8F16D;
+}
+
+#numbersOnly {
+    background: rgba(239,197,202,1);
+    background: -moz-linear-gradient(top, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(222,60,79,1) 51%, rgba(241,142,153,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, 
+rgba(239,197,202,1)), color-stop(50%, rgba(210,75,90,1)), color-stop(51%, 
+rgba(222,60,79,1)), color-stop(100%, rgba(241,142,153,1)));
+    background: -webkit-linear-gradient(top, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 
+50%, rgba(222,60,79,1) 51%, rgba(241,142,153,1) 100%);
+    background: -o-linear-gradient(top, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, 
+rgba(222,60,79,1) 51%, rgba(241,142,153,1) 100%);
+    background: -ms-linear-gradient(top, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, 
+rgba(222,60,79,1) 51%, rgba(241,142,153,1) 100%);
+    color: #fff;
+    font: bold 1em 'BebasNeueRegular',Arial,Helvetica,'Liberation Sans';
+    padding: 4px 5px;
+    visibility:hidden;
+}

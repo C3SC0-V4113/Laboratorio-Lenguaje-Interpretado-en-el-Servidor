@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Allerta);
+
+*                  {
+    margin: 0;
+    padding: 0;
+}
+
+html, body         {
+    height: 100%;
+}
+
+body               {
+    background-image: url(../img/light_yellow.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    font-size: 15px;
+}
+
+#wrapper           {
+    margin:0 auto;
+    width:90%;
+}
+
+h1.emboss          {
+    color: #696acc;
+    font: Bold 3em "Allerta",Times,"Times New Roman";
+    margin: 9px 0;
+    text-align:center;
+    text-shadow: 0 -4px 3px rgba(255, 255, 255, 0.3), 
+                 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+p                  {
+    background-color: #ffffc0;
+    background-image: url('../img/language-icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border: 1px solid;
+    font: Normal 1.2em "Noto Sans",Tahoma,Helvetica,"Liberation Sans";
+    margin: 10px 0px;
+    padding: 36px 10px 36px 136px;
+}
+
+.msgOff            {
+    background-color: #BDE5F8;
+    background-image: url('../img/info.png');
+    color: #00529B;
+}
+
+.msgOn             {
+    background-color: #CFE9FC;
+    background-image: url('../img/info.png');
+    border:5px double #009;
+    color: #009C9D;
+}
