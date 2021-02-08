@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analizando...</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>La palabra analizado por sus partes</h1>
+        <h1>La palabra analizada por sus partes</h1>
     </header>
     <section>
         <article>
@@ -94,7 +95,6 @@
                 $frase = isset($_POST['palabra']) ? $_POST['palabra'] : "";
                 $palabra = strip_tags(str_replace(' ', '', $frase));
                 $arreglo = str_split_unicode($palabra);
-                echo "<p>$palabra</p>";
                 echo "<table>";
                 //Encabezados
                 echo "\t<tr>";
@@ -109,6 +109,10 @@
                     echo "\t</tr>";
                 }
                 echo "</table>";
+                echo "\t<a id=\"button\" href=\"index.html\">Regresar</a>";
+            }
+            else{
+                echo '<a href="nacimiento.html">Ingrese una fecha de nacimiento válida</a>';
             }
             ?>
         </article>
