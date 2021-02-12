@@ -1,0 +1,183 @@
+*              {
+    border:0;
+    padding:0;
+}
+
+body           {
+    background-color: rgb(05,50,10);
+    font-size: 15px;
+}
+
+header h1{
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.2em;
+    line-height: 35px;
+    position: relative;
+    font-weight: 400;
+    color: rgba(220,250,225,0.9);
+    text-align: center;
+    /* text-shadow: 1px 1px 1px rgba(0,0,0,0.1); */
+    text-shadow: 0px 2px 2px #606060;
+    padding: 0px 0px 5px 0px;
+}
+
+legend, label, p{
+    color:rgb(05,30,10);
+    font-family:"FranchiseBold","Century Gothic",Helvetica,"Liberation Sans";
+    font-size:1.2em;
+}
+
+/* El contenedor #wrapper */
+#wrapper{
+    /* Old browsers */
+    background: #a5d8a4; 
+    /* FF3.6+ */
+    background: -moz-linear-gradient(top, #a5d8a4 0%, #7bce69 52%, #8dce71 53%, #7dbf52 100%);
+    /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5d8a4), color-stop(52%,#7bce69), color-stop(53%,#8dce71), color-stop(100%,#7dbf52));
+    /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top, #a5d8a4 0%,#7bce69 52%,#8dce71 53%,#7dbf52 100%);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #a5d8a4 0%,#7bce69 52%,#8dce71 53%,#7dbf52 100%);
+    /* IE10+ */
+    background: -ms-linear-gradient(top, #a5d8a4 0%,#7bce69 52%,#8dce71 53%,#7dbf52 100%);
+    /* W3C */
+    background: linear-gradient(to bottom, #a5d8a4 0%,#7bce69 52%,#8dce71 53%,#7dbf52 100%);
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5d8a4', endColorstr='#7dbf52',GradientType=0 );
+    min-height: 200px;  
+    margin: 0px auto;
+    padding: 12px 20px;
+    position: relative; 
+    right: 0px;
+    width: 50%;
+}
+
+#wrapper p{
+    margin-bottom:15px;
+}
+#wrapper p:first-child{
+    margin: 0px;
+}
+#wrapper label{
+    color: rgb(64, 92, 96);
+    position: relative;
+}
+
+/* Estilo avanzado para los campos input */
+/* placeholder */
+::-webkit-input-placeholder  { 
+    color: rgb(190, 188, 188); 
+    font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+    color: rgb(190, 188, 188);
+    font-style: italic;
+} 
+input {
+    font-family: "BebasNeueRegular",Tahoma,Helvetica,"Liberation Sans";
+    font-size: 1em;
+    outline: none;
+}
+
+/* Todos los campos input, excepto botones y casillas de verificación */
+#wrapper input:not([type="checkbox"]) {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid rgb(178, 178, 178);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-sizing : content-box;
+    margin-top: 4px;
+    padding: 10px 5px 10px 42px;    
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing : content-box;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    width: 86%;
+}
+
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus {
+    border: 1px solid rgba(91, 90, 90, 0.7);
+    background: rgba(238, 236, 240, 0.2);   
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+} 
+
+/* El uso de iconos en los campos de formulario */
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'FontomasRegular';
+    color: rgb(160,210,50);
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    width: 30px;
+}
+
+/* Estilo para los botones de formulario */
+#wrapper p.button input{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    cursor: pointer;    
+    background: rgb(160,210,50);
+    padding: 8px 5px;
+    font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+    color: #fff;
+    font-size: 24px;    
+    border: 1px solid rgb(28,108,122);    
+    margin-bottom: 10px;    
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+            0px 0px 0px 3px rgb(254, 254, 254),
+            0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+            0px 0px 0px 3px rgb(254, 254, 254),
+            0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+            0px 0px 0px 3px rgb(254, 254, 254),
+            0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    width: 30%;
+}
+
+#wrapper p.button input:hover{
+    background: rgb(200,230,95);
+}
+
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+    background: rgb(40,137,154);
+    position: relative;
+    top: 1px;
+    border: 1px solid rgb(12,76,87);
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+p.login.button,
+p.signin.button{
+    text-align: right;
+    margin: 5px 0;
+}
+
+#numbersOnly   {
+    background-color:Red;
+    color:Gold;
+    display:block;
+    font:Bold 0.75em Arial,Helvetica,"Liberation Sans",sans-serif;
+    visibility:hidden;
+}

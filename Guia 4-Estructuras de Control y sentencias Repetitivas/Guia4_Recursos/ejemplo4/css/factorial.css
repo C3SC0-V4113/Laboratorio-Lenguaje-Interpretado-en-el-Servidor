@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background: url(../img/bg.jpg) top center repeat-x #a4d1bc;
+    font-size: 16px;
+}
+
+header h1 {
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+    font: Normal 3.6em 'BebasNeueRegular',Tahoma,Helvetica,'Liberation Sans';
+    text-align: center;
+}
+
+.contenedor{
+    background:#f9f1ed;
+    box-shadow: 0 0 5px .5px black;
+    height:auto;
+    margin:0 auto;
+    max-width:400px;
+    margin-top: 6%;
+    min-height:160px;
+    width:36%;
+}
+
+.encabezado{
+    font-size:18pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 0 1px  5px black;
+    text-align:center;
+    background: url(../img/hform.jpg) repeat;
+    height:53px;
+    line-height: 53px;
+    
+}
+
+.contenedor a {
+    font:Bold 0.9em 'Nobile',Arial,Helvetica,sans-serif;
+    color:#90bf7f;
+    text-decoration:none;
+}
+
+.contenedor a:hover {
+    color:#60a03c;
+    text-decoration:underline;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+input{
+    margin:15px;
+    width:331px;
+    height:50px;
+    font-size:14pt;
+    border-radius:5px;
+    border:none;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    font-weight:bold;
+    color:#90bf7f;
+}
+
+input[type="text"]{
+    text-align:center;
+    background:url(../img/icon-fact.png) no-repeat;
+    background-position: 10px ;
+}
+
+input[type="Email"]{
+    color:#e07361;
+    text-align:center;
+    background:url(../img/icon-correo.png) no-repeat;
+    background-position: 10px ;
+
+}
+
+input[type="submit"]{
+    height:36px;
+    border-radius:5px ;
+    cursor: pointer;
+    background: url(../img/hform.jpg) repeat;
+    font-size:13px;
+    color:white;
+    text-shadow: 0 1px  5px black;
+    margin-right:40px;
+    float:right;
+    width:120px;
+}
+
+textarea{
+    background:url(../img/icon-mensaje.png) no-repeat;
+    background-position: 10px ;
+    border-radius:5px;
+    border:none;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    color:#90bf7f;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14pt;
+    font-weight:bold;
+    height:138px;
+    text-align:center;
+    width:331px;
+}
+
+.formulario{
+    height: 1%;
+    overflow: hidden;
+    padding-top:24px;
+    text-align:center;
+}
+
+.divisor{
+    margin-top:10px;
+    background:url("../img/divisor.png");
+    height:1px;
+    width:416px;
+}
+
+#numbersOnly         {
+    background: #febbbb; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #febbbb 0%, #fe9090 46%, #ff5c5c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#febbbb), color-stop(46%,#fe9090), color-stop(100%,#ff5c5c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* IE10+ */
+    background: linear-gradient(135deg, #febbbb 0%,#fe9090 46%,#ff5c5c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border:3px groove rgb(230,40,5);
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -o-border-radius: 12px 12px 12px 12px;
+    -ms-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+    color:White;
+    font:Bold 8pt 'Nobile',Arial,Helvetica,sans-serif;
+    padding: 6px 5px;
+    visibility:hidden;
+}

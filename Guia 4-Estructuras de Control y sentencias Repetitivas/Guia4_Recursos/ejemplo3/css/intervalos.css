@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body     {
+    background:rgb(15,60,18) url(../img/numbers.jpg) left repeat-y;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 156px;
+}
+
+header h1 {
+    color: #d9e324;
+    font: 700 3.2em "Merriweather",serif;
+    margin: 10px auto;
+    text-align: center;
+    text-shadow: 3px 3px 0px #ececec, 
+                 5px 5px 0px #d9e324;
+    text-transform: uppercase;
+}
+
+h2 {
+    font: 700 1.2em "Roboto",Arial,Helvetica,"Liberation Sans";
+    color: #D3F9CF;
+}
+
+p {
+    font:400 1em "Roboto",Arial,Helvetica,"Liberation Sans";
+}
+
+table {
+    border: 1px solid #3F6558;
+    margin-bottom: 20px;
+}
+
+thead tr th {
+    background: #3F6558;
+}
+
+th, td {
+    padding: 0 10px;
+}
+
+tbody th, tbody td {
+    border: 1px solid #3F6558;
+}
