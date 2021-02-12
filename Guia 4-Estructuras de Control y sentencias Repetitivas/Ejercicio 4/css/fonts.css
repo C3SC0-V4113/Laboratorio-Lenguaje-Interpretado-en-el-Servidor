@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/BebasNeue-Regular.eot');
+    src: url('../fonts/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-Regular.woff') format('woff'),
+         url('../fonts/BebasNeue-Regular.ttf') format('truetype'),
+         url('../fonts/BebasNeue-Regular.svg#BebasNeueRegular') format('svg');
+    font-weight: Bold;
+    font-style: normal;
+}
