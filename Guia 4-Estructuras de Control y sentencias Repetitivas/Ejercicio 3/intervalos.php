@@ -67,8 +67,8 @@
         do {
             if ($min%2==0) {
                 $contador++;
-                $min++;
             }
+            $min++;
         } while ($min <= $max);
         echo "<table class=\"responsive\" data-min=\"11\" data-max=\"30\" cellpadding=\"0\" cellspacing=\"0\">\n";
         echo "\t<tr>\n<td>\n";
