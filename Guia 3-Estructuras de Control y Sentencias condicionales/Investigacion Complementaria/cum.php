@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculando el CUM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -34,7 +35,7 @@
                 $cum=round(CalculoCUM($notas,$uvs),2);
                 Tabla($notas,$uvs,$materias,$cum);
                 echo "<p>Su CUM es de: $cum</p>";
-                echo "<p>".Selector($cum)."</p>";
+                echo "<p id=\"ultimo\">".Selector($cum)."</p>";
                 echo "\t<a id=\"button\" href=\"index.html\">Regresar</a>";
             }
             else{
