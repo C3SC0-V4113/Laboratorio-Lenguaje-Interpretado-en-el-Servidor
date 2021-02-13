@@ -1,0 +1,70 @@
+table {
+    font:400 1.2em "Roboto",Arial,Helvetica,"Liberation Sans";
+}
+
+table.responsiveTable {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:none;
+    box-sizing: border-box;
+    clear:both;
+    color:#666;
+    height:100%;
+    text-align:center;
+    width:100%;
+}
+
+table.responsiveTable th, table.responsiveTable td {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+table.responsiveTable thead tr th {
+    background:#60B670;
+    border-left:1px solid #fff;
+    border-bottom:1px solid #fff;
+    color:#fff;
+}
+
+table.responsiveTable tbody tr.total th {
+    color:#222;
+}
+
+table.responsiveTable thead th:first-child {
+    border-radius:5px 0 0 0;
+}
+
+table.responsiveTable thead th:last-child {
+    border-radius:0 5px 0 0;
+}
+
+table.responsiveTable tbody tr.total th:first-child {
+    border-radius:0 0 0 5px;
+}
+
+table.responsiveTable tbody tr.total td:last-child {
+    border-radius:0 0 5px 0;
+}
+
+table.responsiveTable tbody td, 
+table.responsiveTable tbody th {
+    background:#F2F2F2;
+    border-left:1px solid #fff;
+    border-top:1px solid #fff;
+}
+
+table.responsiveTable tbody th {
+    background:#F2F2F2;
+    color:#404040;
+}
+
+table.responsiveTable tbody th.odd, 
+table.responsiveTable tbody td.odd {
+    background:#E6E6E6;
+}
+
+table.responsiveTable tbody tr.total th, 
+table.responsiveTable tbody tr.total td {
+    background:#ccc;
+}

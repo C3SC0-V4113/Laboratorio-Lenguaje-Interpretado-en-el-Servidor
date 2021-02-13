@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Decimal a binario</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/decimalbinario.css" />
+    <script src="js/filterTextField.js"></script>
+    <script src="js/modernizr.custom.lis.js"></script>
+</head>
+<body>
+<header>
+    <h1>Convertidor de Decimal a Binario</h1>
+</header>
+<section>
+<article>
+<div id="wrapper">
+    <div id="login" class="animate form">
+        <form action="convertir.php" method="POST"> 
+            <p> 
+                <label for="numero" class="uname" data-icon="p"> Número decimal (base 10): </label>
+                <input type="text" name="numero" id="numero" placeholder="Número decimal (base 10)" class="numero" /><br />
+                <span id="numbersOnly">Sólo acepta números y punto decimal</span>
+            </p>
+            <p class="login button"> 
+                <input type="submit" name="convertir" value="Convertir" /> 
+            </p>
+        </form>
+    </div>
+</div>
+</article>
+</section>
+</body>
+</html>
