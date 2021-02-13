@@ -4,7 +4,7 @@
 body{
     padding: 20px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #1f7396;
+    background-color: #db1d4b;
     color: #fff;
 }
 header{
@@ -16,7 +16,7 @@ h1{
     margin-bottom: 15px;
 }
 section{
-    background-color: #27d3a8;
+    background-color: #132743;
     color: #fff;
     margin: auto;
     padding: 50px;
@@ -41,17 +41,17 @@ section{
     margin-right: 15px;
 }
 #enviar{
-    background-color: #f8e7ae;
+    background-color: #f9e3a2;
 }
 table{
     width: 100%;
     border-radius: 15px;
-    background-color: #1f7396;
+    background-color: #db1d4b;
     font-size: 15px;
     margin-bottom: 50px;
 }
 tr:nth-child(odd){
-    background-color: #143959;
+    background-color: #ff6187;
 }
 tr:first-child th:first-child{
     border-top-left-radius: 15px;
@@ -65,17 +65,20 @@ tr:last-child th:first-child{
 tr:last-child th:last-child{
     border-bottom-right-radius: 15px;
 }
+input{
+    width: 250px;
+}
 #button{
     margin-top: 50px;
     text-decoration: none;
     padding: 10px;
-    background-color: #f8e7ae;
+    background-color: #f9e3a2;
     color: #303841;
     border-radius: 4px;
     border: 2px solid #f3dd96;
 }
 footer{
-    background-color: #27d3a8;
+    background-color: #132743;
     color: #fff;
     margin: auto;
     margin-top: 15px;
