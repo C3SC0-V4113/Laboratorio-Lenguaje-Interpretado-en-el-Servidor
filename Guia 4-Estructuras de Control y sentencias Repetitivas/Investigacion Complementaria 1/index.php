@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrices Unidimensionales y Bidimensionales</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Matrices Unidimensionales</h1>
     <?php
     //Matrices unidimensionales (Arreglos)
     $nombres = array();
@@ -16,10 +18,18 @@
     $nombres[3] = "Andy";
     $nombres[4] = "Francisco";
 
+    echo "<div class=\"Array\">";
     foreach ($nombres as $key => $value) {
-        echo "$value<br>";
+        echo "<div class=\"segmento\">";
+        echo "<p>$value</p>";
+        echo '</div>';
     }
+    echo '</div>';
+
     //Matrices bidimensionales
+
+    echo '<h1>Matrices Bidimensionales</h1>';
+
     $compañeros = array();
     $compañeros[0][0] = "Rodrigo";
     $compañeros[1][0] = "Mauricio";
@@ -37,11 +47,18 @@
     $compañeros[3][2] = "HS170505";
     $compañeros[4][2] = "VC190544";
 
+    echo "<table>";
     for ($i = 0; $i < 5; $i++) {
+        echo "\t<tr>";
         for ($j = 0; $j < 3; $j++) {
-            echo '' . $compañeros[$i][$j] . '<br>';
+            echo '<th>' . $compañeros[$i][$j] . '</th>';
         }
+        echo "\t</tr>";
     }
+    echo "</table>";
     ?>
+    <footer>
+        <p>Copyright CESCO 2021</p>
+    </footer>
 </body>
 </html>
