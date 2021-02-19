@@ -33,7 +33,7 @@
         ?>
     </section>
     <footer>
-        <p>Copyright CESCO 2021</p>
+        <p>Copyright Universidad Don Bosco 2021</p>
     </footer>
 </body>
 </html>
