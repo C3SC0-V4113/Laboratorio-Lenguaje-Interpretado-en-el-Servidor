@@ -291,6 +291,7 @@ html{
 
 .formoid-solid-purple div.submit {
   vertical-align: middle;
+  margin-top: 60px;
   text-align: right;
   border-top: 2px solid #d6dbdf;
   background-color: #F3F5FA;
