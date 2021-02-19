@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrices Asociativas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Matrices Asociativas</h1>
-    <article>
-        <p>Los índices no tienen por qué ser correlativos, ni siquiera tienen por qué ser números.</p>
-    </article>
     <section>
+        <article>
+            <p>Los índices no tienen por qué ser correlativos, ni siquiera tienen por qué ser números.</p>
+        </article>
         <?php
         $materias=[
             'Programación'=>'Lenguaje Interpretado en EL Servidor',

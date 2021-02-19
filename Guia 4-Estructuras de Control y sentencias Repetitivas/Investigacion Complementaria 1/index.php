@@ -18,6 +18,7 @@
     $nombres[3] = "Andy";
     $nombres[4] = "Francisco";
 
+    echo "<section>";
     echo "<div class=\"Array\">";
     foreach ($nombres as $key => $value) {
         echo "<div class=\"segmento\">";
@@ -25,6 +26,7 @@
         echo '</div>';
     }
     echo '</div>';
+    echo "</section>";
 
     //Matrices bidimensionales
 
@@ -47,6 +49,7 @@
     $compañeros[3][2] = "HS170505";
     $compañeros[4][2] = "VC190544";
 
+    echo "<section>";
     echo "<table>";
     for ($i = 0; $i < 5; $i++) {
         echo "\t<tr>";
@@ -56,6 +59,7 @@
         echo "\t</tr>";
     }
     echo "</table>";
+    echo "</section>";
     ?>
     <footer>
         <p>Copyright CESCO 2021</p>
