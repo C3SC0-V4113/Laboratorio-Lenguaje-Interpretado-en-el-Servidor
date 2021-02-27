@@ -3,6 +3,8 @@ window.onload = initForms;
 function initForms(){
     var datoalumno;
     var agregar=document.getElementById("agregar");
+    var numericos=document.getElementsByClassName("numerico");
+    LimiteMaxMin(numericos,0,10);
     agregar.addEventListener("click",function(){
         datoalumno = document.frmalumnos.nombre.value;
         if(datoalumno.length > 0){
@@ -33,4 +35,19 @@ function AñadirAlumno(optionMenu, value,nota1,nota2,nota3){
     var texto=value+","+nota1+","+nota2+","+nota3;
     var posicion = optionMenu.length;
     optionMenu[posicion] = new Option(value,texto);
+}
+
+function LimiteMaxMin(Arreglo,min,max){
+    console.log(Arreglo);
+    for (let index = 0; index < Arreglo.length; index++) {
+        const numerico = Arreglo[index];
+        numerico.addEventListener("change",function(){
+            if (numerico.value>max) {
+                numerico.value=max;
+            }
+            if (numerico.value<min) {
+                numerico.value=min;
+            }
+        })
+    }
 }
