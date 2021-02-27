@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Alumnos</title>
+    <script src="js/alumnos.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ingreso de Notas</h1>
+    </header>
+    <section>
+        <article>
+            <form action="resultados.php" name="frmalumnos" method="post">
+                <div class="entradas">
+                    <label for="nombre">Nombre de Estudiante:</label>
+                    <input type="text" name="nombre" id="nombre"><br>
+                    <label for="nota1">Tarea (50%):</label>
+                    <input type="number" class="numerico" max="10" min="0" name="nota1" id="nota1"><br>
+                    <label for="nota2">Investigación (30%):</label>
+                    <input type="number" class="numerico" max="10" min="0" name="nota2" id="nota2"><br>
+                    <label for="nota1">Prueba Escrita (20%):</label>
+                    <input type="number" class="numerico" max="10" min="0" name="nota3" id="nota3"><br>
+                    <!---->
+                    <input type="reset" name="agregar" id="agregar" value="Agregar">
+                </div>
+                <div class="lista">
+                    <label for="ingresados[]">Alumnos</label>
+                    <select name="ingresados[]" id="ingresados" multiple="multiple" size="10"></select>
+                </div>
+                <div class="submit">
+                    <input type="submit" name="enviar" id="enviar" value="Enviar"/>
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer>
+        <p>Copyright CESCO 2021</p>
+    </footer>
+</body>
+</html>
