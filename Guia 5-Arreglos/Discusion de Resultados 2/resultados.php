@@ -7,22 +7,16 @@
     <title>Resultados</title>
 </head>
 <body>
+    <header>
+        <h1>RESULTADOS</h1>
+    </header>
     <?php
     if (isset($_POST['enviar'])) {
-        $notas1=array();
-        $notas2=array();
-        $notas3=array();
-        for ($i=0; $i < 3 ; $i++) { 
-            $nota1=isset($_POST["nota1$i"]) ? intval($_POST["nota1$i"]) : 0;
-            array_push($notas1,$nota1);
-            $nota2=isset($_POST["nota2$i"]) ? intval($_POST["nota2$i"]) : 0;
-            array_push($notas2,$nota2);
-            $nota3=isset($_POST["nota3$i"]) ? intval($_POST["nota3$i"]) : 0;
-            array_push($notas3,$nota3);
+        if (isset($_POST['ingresados'])) {
+            foreach ($_POST["ingresados"] as $alumnos) {
+                echo "<p>$alumnos</p><br>";
+            }
         }
-        print_r($notas1);
-        print_r($notas2);
-        print_r($notas3);
     }
     ?>
 </body>
