@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+/* Encabezados clase inset */
+header .inset {
+    /*color:#238290;*/
+    color:#2680AB;
+    font-family:'Bitter';
+    font-size:4em;
+    font-weight:Bold;
+    text-align:center;
+    text-shadow:-2px -2px 2px #bbb, 
+                0 0 1px #999,
+                2px 2px 2px #777;
+    opacity:0.85;
+}
+
+/* Contenedor del formulario */
+.form-style {
+    background: #FFF;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    margin:20px auto;
+    padding:24px;
+    width:480px;
+}
+
+.form-style h1 {
+    background: #2A88AD;
+    padding: 20px 30px 15px 30px;
+    margin: -30px -30px 20px -30px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #257C9E;
+}
+
+.form-style h1 > span{
+    display: block;
+    margin-top: 2px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+
+/* Estilo de los checkboxes */
+#places {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#places input[type="checkbox"]:not(old),
+#places input[type="radio"]:not(old) {
+    font-size : 1em;
+    margin    : 0;
+    opacity   : 0;
+    padding   : 0;
+    width     : 2em;
+}
+
+#places input[type="checkbox"]:not(old) + label,
+#places input[type="radio"]:not(old) + label{
+    color 		: #c77405;
+    display     : inline-block;
+    font-family : 'Trebuchet';
+    font-size   : 1.2em;
+    line-height : 1.5em;
+    margin-left : -2em;
+}
+
+#places input[type="checkbox"]:not(old) + label > span,
+#places input[type="radio"]:not(old) + label > span{
+    background       : #c77405;
+    background-image : -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    background-image : -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    background-image : -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    background-image : linear-gradient(rgb(240,240,240),rgb(224,224,224));
+    border           : 0.0625em solid rgb(192,192,192);
+    border-radius    : 0.25em;
+    display          : inline-block;
+    height           : 0.875em;
+    margin           : 0.25em 0.5em 0.25em 0.25em;
+    vertical-align   : bottom;
+    width            : 0.875em;
+}
+
+#places input[type="checkbox"]:not(old):checked + label > span,
+#places input[type="radio"]:not(old):checked + label > span{
+    background-image : -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+    background-image : -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+    background-image : -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+    background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+    background-image : linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+#places input[type="checkbox"]:not(old):checked + label > span:before{
+    color       : #c77405;
+    content     : '\f00c';
+    display     : block;
+    font-family : 'FontAwesome';
+    font-size   : 0.875em;
+    font-weight : bold;
+    line-height : 1em;
+    text-align  : center;
+    text-shadow : 0 0 0.0714em rgb(115,153,77);
+    width       : 1em;
+}
+
+#places input[type="radio"]:not(old):checked +  label > span > span{
+    background       : rgb(153,204,102);
+    background-image : -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image : -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image : -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    background-image : linear-gradient(rgb(179,217,140),rgb(153,204,102));
+    border           : 0.0625em solid rgb(115,153,77);
+    border-radius    : 0.125em;
+    display          : block;
+    height           : 0.5em;
+    margin           : 0.125em;
+    width            : 0.5em;
+}
+
+/* Estilo para los botones de formulario */
+.button {
+    border:2px groove #7c93ba;
+    /* Forces the cursor to change to a hand when the button is hovered */
+    cursor:pointer; 
+    padding: 5px 25px;
+    /* Give the background a gradient - see cssdemos.tupence.co.uk/gradients.htm for more info */
+    /* Required for browsers that don't support gradients */
+    background-color:#6b6dbb; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+    background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+    background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+    background: -o-linear-gradient(top, #88add7, #6b6dbb);
+    background: linear-gradient(top, #88add7, #6b6dbb);
+    /* Style to the text inside the button */
+    /* Andkia is available at http://www.google.com/webfonts/specimen/Andika */
+    font-family:Andika, Arial, sans-serif;
+    color:#fff;
+    font-size:1.1em;
+    letter-spacing:.1em;
+    font-variant:small-caps;
+    /* Give the corners a small curve */
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 15px 0;
+    /* Add a drop shadow to the button */
+    -webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+    -moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+.button:hover, .button:focus {
+    color:#edebda;
+    /* Reduce the spread of the shadow to give a pushed effect */
+    -webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+    box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+
+/* Estilos de las listas HTML */
+.form-style ul {
+    margin-bottom: 42px;
+}
+
+/* Estilos para listas numeradas con círculos */
+.numberlist .imglist {
+    width:480px;
+}
+
+.numberlist ol{
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'Trebuchet MS','Lucida Sans';
+    padding: 0;
+    margin-bottom: 4em;
+}
+
+.numberlist ol ol{
+    margin: 0 0 0 2em;
+}
+			
+.numberlist a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #87ceeb;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+}
+
+.numberlist a:hover{
+    background: #cbe7f8;
+    color: #333;
+    text-decoration: none;
+}
+
+.numberlist a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;	
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    color:#FFF;
+}
+
+ul.imglist {
+    font: 15px "Trebuchet MS","Lucida Sans";
+    line-height: 24px;
+    /* list-style: outside url("../img/arrow.png") disc; */
+    list-style: none;
+    margin-bottom: 42px;
+    padding: 0px;
+}
+
+ul.imglist li {
+    background-image: url("../img/arrow.png");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    color: #FFF;
+    list-style: none outside none;
+    padding-left: 32px;
+}
+
+ul.imglist li a:hover {
+    background: #ffac39;
+    color: #222;
+    text-decoration: none;
+}
+
+ul.imglist a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .4em 0;
+    background: #fea500;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+}
