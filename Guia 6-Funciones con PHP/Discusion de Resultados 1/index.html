@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor y Menor de una serie de Números</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>El Mayor y Menor de una serie de Números</h1>
+    </header>
+    <section>
+        <article>
+            <form action="mayor_menor.php" name="frmNO" id="formulario" method="post" onsubmit="return validateForm()">
+                <div class="formulario">
+                    <label for="numero">Ingrese el número</label>
+                    <input type="number" name="numero" id="numero" placeholder="Ingrese cualquier número">
+                    <input type="reset" name="agregar" id="agregar" value="Agregar">
+                </div>
+                <div class="submit">
+                    <input type="submit" name="enviar" id="enviar" class="botonform" value="Enviar">
+                </div>
+                <div class="lista">
+                    <label for="ingresados[]">Números</label>
+                    <select name="ingresados[]" id="ingresados" multiple="multiple" size="10"></select>
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer>
+        <p>Copyright CESCO 2021</p>
+    </footer>
+</body>
+<script src="js/index.js"></script>
+</html>
