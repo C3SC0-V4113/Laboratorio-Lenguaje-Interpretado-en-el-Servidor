@@ -78,7 +78,7 @@ input{
     background-color: #f9e3a2;
     color: #303841;
     border-radius: 4px;
-    border: 2px solid #f3dd96;
+    border: 2px solid #807f7c;
 }
 #ingresados{
     box-sizing: border-box;
@@ -106,7 +106,23 @@ input{
         margin-left: 25px;
     }
 }
-
+.DivNumerico{
+    margin-bottom: 25px;
+}
+.nulo{
+    margin-bottom: 25px;
+}
+span{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #143959;
+}
+#mayor{
+    background-color: red;
+}
+#menor{
+    background-color: blue;
+}
 footer{
     background-color: #27d3a8;
     color: #fff;

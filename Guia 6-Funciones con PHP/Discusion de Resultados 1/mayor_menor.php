@@ -14,14 +14,48 @@
     <section>
         <article>
             <?php
+            function Mayor_Menor($arreglo=[]){
+                $mayor=PHP_INT_MIN;
+                $contador=0;
+                $puntero=0;
+                $apuntadorMa=0;
+                $menor=PHP_INT_MAX;
+                $apuntadorm=0;
+                foreach ($arreglo as $entrada) {
+                    if (intval($entrada)>=$mayor) {
+                        $mayor=$entrada;
+                        $apuntadorMa=$contador;
+                    }
+                    elseif (intval($entrada)<=$menor) {
+                        $menor=$entrada;
+                        $apuntadorm=$contador;
+                    }
+                    $contador++;
+                }
+                echo "<div class=\"DivNumerico\">";
+                foreach ($arreglo as $entrada) {
+                    if ($puntero==$apuntadorMa) {
+                        echo "<span id='mayor'>$entrada</span>";
+                    }
+                    elseif ($puntero==$apuntadorm) {
+                        echo "<span id='menor'>$entrada</span>";
+                    }
+                    else{
+                        echo "<span>$entrada</span>";
+                    }
+                    $puntero++;
+                }
+                echo "</div>";
+                echo "<p class=\"nulo\">El mayor es: $mayor y el menor es: $menor</p>";
+            }
+
             $alumnos = array();
             $individuos = array();
             $notastotales = array();
             if (isset($_POST['enviar'])) {
                 if (isset($_POST['ingresados'])) {
-                    foreach ($_POST["ingresados"] as $entrada) {
-                        echo "<p>$entrada</p>";
-                    }
+                    $numeros=$_POST['ingresados'];
+                    Mayor_Menor($numeros);
                 }
                 echo "\t<a id=\"button\" href=\"index.html\">Regresar</a>";
             } else {

@@ -1,8 +1,12 @@
 window.onload = initForms;
 
+var Validado=false;
+
 function initForms(){
+    var enviar=document.getElementById("enviar");
     var datonumero;
     var agregar=document.getElementById("agregar");
+
     agregar.addEventListener("click",function(){
         datonumero = document.frmNO.numero.value;
         if(datonumero.length > 0){
@@ -10,12 +14,13 @@ function initForms(){
             AñadirNumero(formnumeros.ingresados,formnumeros.numero.value);
         }
         else{
-            alert("Debe ingresar un producto para agregarlo.");
+            alert("Debe ingresar un número.");
         }
     },false);
-    document.getElementById("enviar").onclick = function(){
+
+    enviar.addEventListener("click",function(){
         var contador = 0;
-        var opciones=document.frmalumnos.ingresados.options;
+        var opciones=document.getElementById("ingresados").options;
         for(var i=0; i<opciones.length; i++){
             if(opciones[i].selected){
                 contador++;
@@ -23,9 +28,16 @@ function initForms(){
         }
         if(contador == 0){
             alert("No se han seleccionado elementos.");
-            return false;                                                   
+            Validado = false;                                                   
         }
-    }
+        else if (contador<=2) {
+            alert("Seleccione más de 2 elementos.");
+            Validado = false;    
+        }
+        else{
+            Validado=true;
+        }
+    },true);
 }
 
 function AñadirNumero(optionMenu, value){
@@ -34,3 +46,7 @@ function AñadirNumero(optionMenu, value){
     var posicion = optionMenu.length;
     optionMenu[posicion] = new Option(value,texto);
 }
+
+function validateForm() {
+    return Validado;
+  }
