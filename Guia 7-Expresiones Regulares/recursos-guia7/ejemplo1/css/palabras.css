@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        left bottom,
+        color-stop(0, #F5F7D4),
+        color-stop(1, #F7F1D2)
+    );
+    background-image: -o-linear-gradient(left bottom, #F5F7D4 0%, #F7F1D2 100%);
+    background-image: -moz-linear-gradient(left bottom, #F5F7D4 0%, #F7F1D2 100%);
+    background-image: -webkit-linear-gradient(left bottom, #F5F7D4 0%, #F7F1D2 100%);
+    background-image: -ms-linear-gradient(left bottom, #F5F7D4 0%, #F7F1D2 100%);
+    background-image: linear-gradient(to left bottom, #F5F7D4 0%, #F7F1D2 100%);
+    font-family: Arial,Helvetica,"Liberation Sans"; 
+}
+
+h1 {
+    color: #603920;
+    font: Bold 2em Verdana,Helvetica,"Liberation Sans";
+}
