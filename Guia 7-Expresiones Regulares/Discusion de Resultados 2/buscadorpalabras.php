@@ -24,11 +24,12 @@
                                 trim($_POST['comment']) : null;
                             $palabra = isset($_POST['palabra']) ?
                                 trim($_POST['palabra']) : null;
-                            $text = preg_replace(
-                                "/\b(" . $palabra . ")\b/i",'<span style="background:#5fc9f6">\1</span>',$text);
+                            $text = preg_replace("/\b(" . $palabra . ")\b/i",'<span style="background:#5fc9f6">\1</span>',$text);
+                            $no=count(preg_split("/\b(" . $palabra . ")\b/i",$text));
                         ?>
                             <div id="sidebarwrap">
                                 <h2>Resultado</h2>
+                                <p><?php echo 'Se encontraron '.($no-1).' coincidencias'; ?></p>
                                 <p><?= $text ?></p>
                             </div>
                         <?php
