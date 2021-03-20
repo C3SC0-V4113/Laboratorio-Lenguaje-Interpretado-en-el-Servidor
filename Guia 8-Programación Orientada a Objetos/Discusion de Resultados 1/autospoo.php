@@ -68,9 +68,8 @@
             if (isset($_POST['enviar'])) {
                 if (isset($_POST['ingresados'])) {
                     $auto=$_POST['ingresados'];
-
                     foreach ($movil as $key => $value) {
-                        if ($value->marca ." ".$value->modelo==$auto) {
+                        if ($value->nombre()==$auto) {
                             $movil[$key]->mostrar();
                         }
                     }

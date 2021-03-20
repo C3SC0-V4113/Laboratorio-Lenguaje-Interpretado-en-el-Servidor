@@ -3,10 +3,10 @@
 class auto
 {
     //Propiedades de la clase auto
-    public $marca;
-    public $modelo;
-    public $color;
-    public $image;
+    private $marca;
+    private $modelo;
+    private $color;
+    private $image;
     //Método constructor
     function __construct($marca = 'Honda', $modelo = 'Civic', $color = 'Gris', $image = 'img/hondacivic.jpg')
     {
@@ -42,6 +42,7 @@ class auto
         echo $tabla;
     }
 
+    /*Metodo para poner en las option y comparar al seleccionar */
     function nombre(){
         return $this->marca . " " .$this->modelo;
     }
