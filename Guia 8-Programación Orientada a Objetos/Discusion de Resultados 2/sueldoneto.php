@@ -17,22 +17,19 @@
     if (isset($_POST['enviar'])) {
         if (isset($_POST['enviar'])) {
             echo "<h3>Boleta de pago del empleado</h3>";
-            $name = (isset($_POST['nombre'])) ? $_POST['nombre'] :
-                "";
-            $apellido = (isset($_POST['apellido'])) ?
-                $_POST['apellido'] : "";
-            $sueldo = (isset($_POST['sueldo'])) ?
-                doubleval($_POST['sueldo']) : 0.0;
-            $numHorasExtras = (isset($_POST['horasextras'])) ?
-                intval($_POST['horasextras']) : 0;
-            $pagohoraextra = (isset($_POST['pagohoraextra'])) ?
-                floatval($_POST['pagohoraextra']) : 0.0;
+            $name = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
+            $apellido = (isset($_POST['apellido'])) ? $_POST['apellido'] : "";
+            $sueldo = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
+            $descuento=(isset($_POST['descuentoconcepto'])) ? doubleval($_POST['descuentoconcepto']) : 0.0;
+            $numHorasExtras = (isset($_POST['horasextras'])) ? intval($_POST['horasextras']) : 0;
+            $pagohoraextra = (isset($_POST['pagohoraextra'])) ? floatval($_POST['pagohoraextra']) : 0.0;
             //Creando instancias de la clase empleado
             $empleado1 = new empleado();
             $empleado1->obtenerSalarioNeto(
                 $name,
                 $apellido,
                 $sueldo,
+                $descuento,
                 $numHorasExtras,
                 $pagohoraextra
             );
@@ -57,6 +54,10 @@
                         <div class="form-group">
                             <label for="sueldo">Sueldo empleado ($):</label>
                             <input type="text" name="sueldo" id="sueldo" size="8" maxlength="8" class="inputField form-control" /><br />
+                        </div>
+                        <div class="form-group">
+                            <label for="descuentoconcepto">Descuento por concepto ($):</label>
+                            <input type="text" name="descuentoconcepto" id="descuentoconcepto" size="8" maxlength="8" class="inputField form-control" /><br />
                         </div>
                         <div class="form-group">
                             <label for="horasextras">Número horas extras:</label>
