@@ -50,25 +50,31 @@
             <form name="operaciones" id="operaciones" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Seleccione el auto</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="ingresados" name="ingresados">
                         <?php
                         for ($i = 0; $i < count($movil); $i++) {
                             $nombremodelo=$movil[$i]->nombre();
-                            echo '<option value"">'.$nombremodelo.'</option>';
+                            echo '<option value"'.$i.'">'.$nombremodelo.'</option>';
                         }
                         ?>
                     </select>
                 </div>
                 <input type="reset" class="btn btn-primary mb-2" name="restablecer" value="Cancelar" />
-                <input type="submit" class="btn btn-primary mb-2" name="enviar" value="Enviar" />
+                <input type="submit" class="btn btn-primary mb-2" name="enviar" id="enviar" value="Enviar" />
             </form>
         </div>
         <div class="row">
         <?php
-            
-            //Mostrando la tabla con los autos disponibles
-            for ($i = 0; $i < count($movil); $i++) {
-                $movil[$i]->mostrar();
+            if (isset($_POST['enviar'])) {
+                if (isset($_POST['ingresados'])) {
+                    $auto=$_POST['ingresados'];
+
+                    foreach ($movil as $key => $value) {
+                        if ($value->marca ." ".$value->modelo==$auto) {
+                            $movil[$key]->mostrar();
+                        }
+                    }
+                }
             }
             ?>
         </div>
