@@ -41,4 +41,8 @@ class auto
         $tabla .= "</div>";
         echo $tabla;
     }
+
+    function nombre(){
+        return $this->marca . "-" .$this->modelo;
+    }
 }
