@@ -24,7 +24,7 @@
     {
         include_once("class/" . $class_name . ".class.php");
     }
-    if (isset($_POST['submeeet'])) :
+    if (isset($_POST['submeeet'])) {
         if (isset($_POST['submeeet'])) {
             echo "<h3>Boleta de pago del empleado</h3>";
             $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
@@ -37,7 +37,7 @@
             //Creando instancias de la clase empleado
             $employer = new empleado();
             $employer->obtenerSalarioNeto($nombre, $apellido, $sueldoneto, $descuentoconcepto, $numHorasExtras, $pagohoraextra, $años, $hipotecario);
-        } else
+        } }else{
     ?>
         <nav class="navbar navbar-dark bg-primary text-white allign-center" id="encabezado">
             <div class="container center-align">
@@ -86,7 +86,7 @@
                     </div>
                 </form>
             <?php
-        endif;
+        }
             ?>
             </article>
         </section>
