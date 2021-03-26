@@ -14,6 +14,7 @@ class empleado
     private $pagoxhoraextra;
     private $descuento;
     private $años;
+    private $pagoxfidelidad;
     //Declaración de constantes para los descuentos del empleado
     //Se inicializan porque pertenecen a la clase
     const descISSS = 0.03;
@@ -51,20 +52,27 @@ class empleado
         $pagoxhoraextra = 0.0,
         $años=0
     ) {
+        $this->años=$años;
         $this->nombre = $nombre;
         $this->apellido = $apellido;
         $this->pagoxhoraextra = $horasextras * $pagoxhoraextra;
         $this->sueldoNominal = $salario;
+        if ($this->años>=2) {
+            $this->pagoxfidelidad=$this->sueldoNominal*0.2;
+        }
+        else{
+            $this->pagoxfidelidad=0;
+        }
         if ($this->pagoxhoraextra > 0) {
-            $this->isss = ($salario + $this->pagoxhoraextra) * self::descISSS;
-            $this->afp = ($salario + $this->pagoxhoraextra) * self::descAFP;
+            $this->isss = ($salario + $this->pagoxhoraextra + $this->pagoxfidelidad) * self::descISSS;
+            $this->afp = ($salario + $this->pagoxhoraextra + $this->pagoxfidelidad) * self::descAFP;
         } else {
             $this->isss = $salario * self::descISSS;
             $this->afp = $salario * self::descAFP;
         }
         $this->descuento=$descuento;
-        $this->años=$años;
         
+
         $salariocondescuento = $this->sueldoNominal - ($this->isss + $this->afp + $this->descuento);
         //De acuerdo a criterios del Ministerio de Hacienda
         //el descuento de la renta varía según el ingreso percibido
@@ -90,7 +98,7 @@ class empleado
  //Significa que el salario obtenido es negativo
  } */
         $this->sueldoNominal = $salario;
-        $this->sueldoLiquido = $this->sueldoNominal + $this->pagoxhoraextra - ($this->isss + $this->afp + $this->renta + $this->descuento);
+        $this->sueldoLiquido = $this->sueldoNominal + $this->pagoxhoraextra + $this->pagoxfidelidad - ($this->isss + $this->afp + $this->renta + $this->descuento);
         $this->imprimirBoletaPago();
     }
     function imprimirBoletaPago()
@@ -104,8 +112,10 @@ class empleado
         $tabla .= "<td>$ " . number_format($this->sueldoNominal,2,'.',',') . "</td></tr>";
         $tabla .= "<tr><td>Salario por horas extras: </td>";
         $tabla .= "<td>$ " . number_format($this->pagoxhoraextra,2,'.',',') . "</td></tr>";
-        $tabla .= "<tr><td>Años de Trabajo: </td>";
-        $tabla .= "<td> " . number_format($this->años,0,'.',',') . "</td></tr>";
+        if ($this->años>=2) {
+            $tabla .= "<tr><td>Bono por estar más de 2 años: </td>";
+            $tabla .= "<td>$ " . number_format($this->pagoxfidelidad,2,'.',',') . "</td></tr>";
+        }
         $tabla .= "<tr class='success'><td colspan=\"2\"><h4>Descuentos</h4></td></tr>";
         $tabla .= "<tr ><td >Descuento por concepto: </td>";
         $tabla .= "<td>$ " . number_format($this->descuento,2,'.',',') . "</td></tr>";
