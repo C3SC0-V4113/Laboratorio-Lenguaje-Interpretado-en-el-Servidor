@@ -24,6 +24,8 @@ class empleado
     const descISSS = 0.03;
     const descRENTA = 0.075;
     const descAFP = 0.0625;
+    const descHipo=0.049;
+    const descFSV=0.058;
     //Constructor de la clase
     function __construct()
     {
@@ -48,7 +50,7 @@ class empleado
         echo $backlink;
     }
     //Métodos de la clase empleado
-    function obtenerSalarioNeto(
+    function obtenerSalarioNetoRecibo(
         $nombre,
         $apellido,
         $salario,
@@ -78,12 +80,12 @@ class empleado
             $this->afp = $salario * self::descAFP;
         }
         if ($this->hipotecario) {
-            $this->deschipotecario=$salario*0.049;
+            $this->deschipotecario=$salario*self::descHipo;
         }
         else{
             $this->deschipotecario=0;
         }
-        $this->FSV=$salario*0.058;
+        $this->FSV=$salario*self::descFSV;
         $this->descuento=$descuento;
         
 
@@ -92,32 +94,21 @@ class empleado
         //el descuento de la renta varía según el ingreso percibido
         if ($salariocondescuento > 2038.10) {
             $this->renta = $salariocondescuento * 0.3;
-        } elseif (
-            $salariocondescuento > 895.24 &&
-            $salariocondescuento <= 2038.10
-        ) {
+        } elseif ($salariocondescuento > 895.24 && $salariocondescuento <= 2038.10) {
             $this->renta = $salariocondescuento * 0.2;
-        } elseif (
-            $salariocondescuento > 472.00 &&
-            $salariocondescuento <= 895.24
-        ) {
+        } elseif ( $salariocondescuento > 472.00 && $salariocondescuento <= 895.24) {
             $this->renta = $salariocondescuento * 0.1;
-        } elseif (
-            $salariocondescuento > 0 &&
-            $salariocondescuento <= 472.00
-        ) {
+        } elseif ( $salariocondescuento > 0 && $salariocondescuento <= 472.00) {
             $this->renta = 0.0;
         }
-        /* else {
- //Significa que el salario obtenido es negativo
- } */
         $this->sueldoNominal = $salario;
         $this->sueldoLiquido = $this->sueldoNominal + $this->pagoxhoraextra + $this->pagoxfidelidad - ($this->isss + $this->afp + $this->descuento+$this->deschipotecario+$this->FSV+$this->renta);
         $this->imprimirBoletaPago();
     }
     function imprimirBoletaPago()
     {
-        $tabla = "<table class='table '><tr>";
+        $tabla="<div class='container'>";
+        $tabla .= "<table class='table '><tr>";
         $tabla .= "<td>Id empleado: </td>";
         $tabla .= "<td>" . self::$idEmpleado . "</td></tr>";
         $tabla .= "<tr><td>Nombre empleado: </td>\n";
@@ -150,6 +141,7 @@ class empleado
         $tabla .= "<tr><td>Sueldo líquido a pagar: </td>";
         $tabla .= "<td> $" . number_format($this->sueldoLiquido,2,'.',',') . "</td></tr>";
         $tabla .= "</table>";
+        $tabla.="</div>";
         echo $tabla;
     }
 }

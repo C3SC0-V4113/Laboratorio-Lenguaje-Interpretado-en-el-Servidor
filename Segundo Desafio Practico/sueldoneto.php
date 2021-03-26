@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-
 <body>
     <?php
     date_default_timezone_set("America/El_Salvador");
@@ -26,7 +24,12 @@
     }
     if (isset($_POST['submeeet'])) {
         if (isset($_POST['submeeet'])) {
-            echo "<h3>Boleta de pago del empleado</h3>";
+            echo
+            "        <nav class='navbar navbar-dark bg-primary text-white allign-center' id='encabezado'>
+            <div class='container center-align'>
+                <h1>Boleta de pago del empleado</h1>
+            </div>
+        </nav>";
             $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
             $apellido = (isset($_POST['apellido'])) ? $_POST['apellido'] : "";
             $sueldoneto = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
@@ -36,8 +39,9 @@
             $hipotecario = isset($_POST['Hipotecario']);
             //Creando instancias de la clase empleado
             $employer = new empleado();
-            $employer->obtenerSalarioNeto($nombre, $apellido, $sueldoneto, $descuentoconcepto, $numHorasExtras, $pagohoraextra, $años, $hipotecario);
-        } }else{
+            $employer->obtenerSalarioNetoRecibo($nombre, $apellido, $sueldoneto, $descuentoconcepto, $numHorasExtras, $pagohoraextra, $años, $hipotecario);
+        }
+    } else {
     ?>
         <nav class="navbar navbar-dark bg-primary text-white allign-center" id="encabezado">
             <div class="container center-align">
@@ -90,11 +94,13 @@
             ?>
             </article>
         </section>
-        <footer class="col-xs-12">
-            <div class="container">
-                <p>Copyright Universidad Don Bosco 2021</p>
-            </div>
-        </footer>
+        <div class="footer">
+            <footer class="col-xs-12">
+                <div class="container">
+                    <p>Copyright Universidad Don Bosco 2021</p>
+                </div>
+            </footer>
+        </div>
 </body>
 <script src="js/validacion.js"></script>
 </html>
