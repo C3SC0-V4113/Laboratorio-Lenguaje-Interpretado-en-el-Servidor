@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos del empleado</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body class='container'>
+
+<body>
     <?php
     date_default_timezone_set("America/El_Salvador");
-    $fechainic = isset($_POST['fechainic'])?$_POST['fechainic']:"";
-    $fechanacimiento=new DateTime($fechainic);
+    $fecha = isset($_POST['fechainic']) ? $_POST['fechainic'] : "";
+    $fechaempleo = new DateTime($fecha);
     $fechaactual = new DateTime("now");
-    $interval = date_diff($fechaactual, $fechanacimiento);
-    $y= $interval->format('%y');
-    spl_autoload_register('miautoload');
-    function miautoload($class_name)
+    $interval = date_diff($fechaactual, $fechaempleo);
+    $años = $interval->format('%y');
+
+    spl_autoload_register('theauto');
+    function theauto($class_name)
     {
         include_once("class/" . $class_name . ".class.php");
     }
-    if (isset($_POST['enviar'])) {
-        if (isset($_POST['enviar'])) {
+    if (isset($_POST['submeeet'])) :
+        if (isset($_POST['submeeet'])) {
             echo "<h3>Boleta de pago del empleado</h3>";
-            $name = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
+            $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
             $apellido = (isset($_POST['apellido'])) ? $_POST['apellido'] : "";
-            $sueldo = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
-            $descuento=(isset($_POST['descuentoconcepto'])) ? doubleval($_POST['descuentoconcepto']) : 0.0;
+            $sueldoneto = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
+            $descuentoconcepto = (isset($_POST['descuentoconcepto'])) ? doubleval($_POST['descuentoconcepto']) : 0.0;
             $numHorasExtras = (isset($_POST['horasextras'])) ? intval($_POST['horasextras']) : 0;
             $pagohoraextra = (isset($_POST['pagohoraextra'])) ? floatval($_POST['pagohoraextra']) : 0.0;
-            $hipotecario=isset($_POST['Hipotecario']);
+            $hipotecario = isset($_POST['Hipotecario']);
             //Creando instancias de la clase empleado
-            $empleado1 = new empleado();
-            $empleado1->obtenerSalarioNeto(
-                $name,
-                $apellido,
-                $sueldo,
-                $descuento,
-                $numHorasExtras,
-                $pagohoraextra,
-                $y,
-                $hipotecario
-            );
-        }
-    } else {
+            $employer = new empleado();
+            $employer->obtenerSalarioNeto($nombre, $apellido, $sueldoneto, $descuentoconcepto, $numHorasExtras, $pagohoraextra, $años, $hipotecario);
+        } else
     ?>
-        <section class="container">
-            <nav class="navbar navbar-dark bg-primary text-white">
+        <nav class="navbar navbar-dark bg-primary text-white allign-center" id="encabezado">
+            <div class="container center-align">
                 <h1>Formulario empleado</h1>
-            </nav>
+            </div>
+        </nav>
+        <section class="container">
             <article>
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                     <fieldset>
@@ -80,19 +76,25 @@
                             <label for="pogohoraextra">Pago por hora extra:</label>
                             <input type="text" name="pagohoraextra" id="pagohoraextra" size="4" maxlength="6" class="inputField form-control" /><br />
                         </div>
-                        <div class="checkbox lg-3">
+                        <div class="form-group checkbox lg-3 form-check">
                             <label><input type="checkbox" name="Hipotecario" id="Hipotecario"> Credito Hipotecario</label>
-                            
                         </div>
-                        <input type="submit" name="enviar" class="btn btn-primary mb-2" value="Enviar" class="inputButton" />&nbsp;
-                        <input type="reset" name="limpiar" class="btn btn-primary mb-2" value="Restablecer" class="inputButton" />
                     </fieldset>
+                    <div class="form-group">
+                        <input type="submit" name="submeeet" class="btn btn-primary mb-2" value="Enviar" class="inputButton" />&nbsp;
+                        <input type="reset" name="limpiar" class="btn btn-danger mb-2" value="Restablecer" class="inputButton" />
+                    </div>
                 </form>
             <?php
-        }
+        endif;
             ?>
             </article>
         </section>
+        <footer class="col-xs-12">
+            <div class="container">
+                <p>Copyright Universidad Don Bosco 2021</p>
+            </div>
+        </footer>
 </body>
 <script src="js/validacion.js"></script>
 </html>
