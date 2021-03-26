@@ -9,6 +9,15 @@
 </head>
 <body class='container'>
     <?php
+    date_default_timezone_set("America/El_Salvador");
+    $fechainic = isset($_POST['fechainic'])?$_POST['fechainic']:"";
+    $fechanacimiento=new DateTime($fechainic);
+    $fechaactual = new DateTime("now");
+    $interval = date_diff($fechaactual, $fechanacimiento);
+    $y= $interval->format('%y');
+    if (intval($interval->format('%y'))>=2) {
+
+    }
     spl_autoload_register('miautoload');
     function miautoload($class_name)
     {
@@ -17,24 +26,22 @@
     if (isset($_POST['enviar'])) {
         if (isset($_POST['enviar'])) {
             echo "<h3>Boleta de pago del empleado</h3>";
-            $name = (isset($_POST['nombre'])) ? $_POST['nombre'] :
-                "";
-            $apellido = (isset($_POST['apellido'])) ?
-                $_POST['apellido'] : "";
-            $sueldo = (isset($_POST['sueldo'])) ?
-                doubleval($_POST['sueldo']) : 0.0;
-            $numHorasExtras = (isset($_POST['horasextras'])) ?
-                intval($_POST['horasextras']) : 0;
-            $pagohoraextra = (isset($_POST['pagohoraextra'])) ?
-                floatval($_POST['pagohoraextra']) : 0.0;
+            $name = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
+            $apellido = (isset($_POST['apellido'])) ? $_POST['apellido'] : "";
+            $sueldo = (isset($_POST['sueldo'])) ? doubleval($_POST['sueldo']) : 0.0;
+            $descuento=(isset($_POST['descuentoconcepto'])) ? doubleval($_POST['descuentoconcepto']) : 0.0;
+            $numHorasExtras = (isset($_POST['horasextras'])) ? intval($_POST['horasextras']) : 0;
+            $pagohoraextra = (isset($_POST['pagohoraextra'])) ? floatval($_POST['pagohoraextra']) : 0.0;
             //Creando instancias de la clase empleado
             $empleado1 = new empleado();
             $empleado1->obtenerSalarioNeto(
                 $name,
                 $apellido,
                 $sueldo,
+                $descuento,
                 $numHorasExtras,
-                $pagohoraextra
+                $pagohoraextra,
+                $y
             );
         }
     } else {
@@ -59,6 +66,14 @@
                             <input type="text" name="sueldo" id="sueldo" size="8" maxlength="8" class="inputField form-control" /><br />
                         </div>
                         <div class="form-group">
+                            <label for="fechainic">Fecha de Inicio:</label>
+                            <input type="date" name="fechainic" id="fechainic" class="inputField form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descuentoconcepto">Descuento por concepto ($):</label>
+                            <input type="text" name="descuentoconcepto" id="descuentoconcepto" size="8" maxlength="8" class="inputField form-control" /><br />
+                        </div>
+                        <div class="form-group">
                             <label for="horasextras">Número horas extras:</label>
                             <input type="text" name="horasextras" id="horasextras" size="4" maxlength="2" class="inputField form-control" /><br />
                         </div>
@@ -76,4 +91,5 @@
             </article>
         </section>
 </body>
+<script src="js/validacion.js"></script>
 </html>
