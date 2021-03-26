@@ -15,6 +15,10 @@ class empleado
     private $descuento;
     private $años;
     private $pagoxfidelidad;
+    private $hipotecario;
+    private $deschipotecario;
+    private $FSV;
+
     //Declaración de constantes para los descuentos del empleado
     //Se inicializan porque pertenecen a la clase
     const descISSS = 0.03;
@@ -30,6 +34,7 @@ class empleado
         $this->descuento=0;
         $this->pagoxhoraextra = 0.0;
         $this->años=0;
+        $this->hipotecario=false;
     }
     //Destructor de la clase
     function __destruct()
@@ -50,9 +55,11 @@ class empleado
         $descuento,
         $horasextras,
         $pagoxhoraextra = 0.0,
-        $años=0
+        $años=0,
+        $hipotecario=false
     ) {
         $this->años=$años;
+        $this->hipotecario=$hipotecario;
         $this->nombre = $nombre;
         $this->apellido = $apellido;
         $this->pagoxhoraextra = $horasextras * $pagoxhoraextra;
@@ -70,10 +77,17 @@ class empleado
             $this->isss = $salario * self::descISSS;
             $this->afp = $salario * self::descAFP;
         }
+        if ($this->hipotecario) {
+            $this->deschipotecario=$salario*0.049;
+        }
+        else{
+            $this->deschipotecario=0;
+        }
+        $this->FSV=$salario*0.058;
         $this->descuento=$descuento;
         
 
-        $salariocondescuento = $this->sueldoNominal - ($this->isss + $this->afp + $this->descuento);
+        $salariocondescuento = $this->sueldoNominal - ($this->isss + $this->afp + $this->descuento+$this->deschipotecario+$this->FSV);
         //De acuerdo a criterios del Ministerio de Hacienda
         //el descuento de la renta varía según el ingreso percibido
         if ($salariocondescuento > 2038.10) {
@@ -98,7 +112,7 @@ class empleado
  //Significa que el salario obtenido es negativo
  } */
         $this->sueldoNominal = $salario;
-        $this->sueldoLiquido = $this->sueldoNominal + $this->pagoxhoraextra + $this->pagoxfidelidad - ($this->isss + $this->afp + $this->renta + $this->descuento);
+        $this->sueldoLiquido = $this->sueldoNominal + $this->pagoxhoraextra + $this->pagoxfidelidad - ($this->isss + $this->afp + $this->descuento+$this->deschipotecario+$this->FSV+$this->renta);
         $this->imprimirBoletaPago();
     }
     function imprimirBoletaPago()
@@ -117,6 +131,12 @@ class empleado
             $tabla .= "<td>$ " . number_format($this->pagoxfidelidad,2,'.',',') . "</td></tr>";
         }
         $tabla .= "<tr class='success'><td colspan=\"2\"><h4>Descuentos</h4></td></tr>";
+        $tabla .= "<tr ><td >Descuento por Fondo Social Para la Vivienda: </td>";
+        $tabla .= "<td>$ " . number_format($this->FSV,2,'.',',') . "</td></tr>";
+        if($this->deschipotecario!=0){
+            $tabla .= "<tr ><td >Descuento Credito hipotecario: </td>";
+            $tabla .= "<td>$ " . number_format($this->deschipotecario,2,'.',',') . "</td></tr>";
+        }
         $tabla .= "<tr ><td >Descuento por concepto: </td>";
         $tabla .= "<td>$ " . number_format($this->descuento,2,'.',',') . "</td></tr>";
         $tabla .= "<tr ><td >Descuento seguro social: </td>";
@@ -126,7 +146,7 @@ class empleado
         $tabla .= "<tr><td>Descuento renta: </td>";
         $tabla .= "<td>$ " . number_format($this->renta,2,'.',',') . "</td></tr>";
         $tabla .= "<tr><td>Total descuentos: </td>";
-        $tabla .= "<td>$ " . number_format($this->isss + $this->afp + $this->renta + $this->descuento, 2, '.', ',') . "</td></tr>";
+        $tabla .= "<td>$ " . number_format($this->isss + $this->afp + $this->descuento  +$this->deschipotecario + $this->FSV + $this->renta, 2, '.', ',') . "</td></tr>";
         $tabla .= "<tr><td>Sueldo líquido a pagar: </td>";
         $tabla .= "<td> $" . number_format($this->sueldoLiquido,2,'.',',') . "</td></tr>";
         $tabla .= "</table>";

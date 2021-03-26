@@ -15,9 +15,6 @@
     $fechaactual = new DateTime("now");
     $interval = date_diff($fechaactual, $fechanacimiento);
     $y= $interval->format('%y');
-    if (intval($interval->format('%y'))>=2) {
-
-    }
     spl_autoload_register('miautoload');
     function miautoload($class_name)
     {
@@ -32,6 +29,7 @@
             $descuento=(isset($_POST['descuentoconcepto'])) ? doubleval($_POST['descuentoconcepto']) : 0.0;
             $numHorasExtras = (isset($_POST['horasextras'])) ? intval($_POST['horasextras']) : 0;
             $pagohoraextra = (isset($_POST['pagohoraextra'])) ? floatval($_POST['pagohoraextra']) : 0.0;
+            $hipotecario=isset($_POST['Hipotecario']);
             //Creando instancias de la clase empleado
             $empleado1 = new empleado();
             $empleado1->obtenerSalarioNeto(
@@ -41,7 +39,8 @@
                 $descuento,
                 $numHorasExtras,
                 $pagohoraextra,
-                $y
+                $y,
+                $hipotecario
             );
         }
     } else {
@@ -80,6 +79,10 @@
                         <div class="form-group">
                             <label for="pogohoraextra">Pago por hora extra:</label>
                             <input type="text" name="pagohoraextra" id="pagohoraextra" size="4" maxlength="6" class="inputField form-control" /><br />
+                        </div>
+                        <div class="checkbox lg-3">
+                            <label><input type="checkbox" name="Hipotecario" id="Hipotecario"> Credito Hipotecario</label>
+                            
                         </div>
                         <input type="submit" name="enviar" class="btn btn-primary mb-2" value="Enviar" class="inputButton" />&nbsp;
                         <input type="reset" name="limpiar" class="btn btn-primary mb-2" value="Restablecer" class="inputButton" />
