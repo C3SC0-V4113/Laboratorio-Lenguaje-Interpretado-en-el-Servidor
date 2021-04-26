@@ -1,0 +1,117 @@
+/*
+   Estilos para la tabla principal de resultados paginados
+*/
+#container {
+   padding-right: 15%;
+   padding-left: 15%;
+   margin-right: auto;
+   margin-left: auto;
+ }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+   height: 450px;
+   width: 300px;
+}
+
+.titulo{
+   font-size: 20px;
+   color: black;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+table {
+    border-collapse: collapse;
+}
+
+
+.tablaps                   {
+   width: 100%;
+   background-color: #fff;
+}
+
+.tablaps caption           {
+   font-family:Arial,Verdana,Helvetica,sans-serif;
+   font-weight:bold;
+   font-size:12pt;
+   color:#881100;
+}
+
+.tablaps th                {
+   font-family: Montserrat-Medium;
+   font-size: 12px;
+   color: #fff;
+   line-height: 1.4;
+   text-transform: uppercase;
+   background-color: #36304a
+}
+th{
+   padding-top: 24px;
+   padding-bottom: 20px;
+}
+.tablaps .numeral          {
+   vertical-align:top;
+ }
+
+.caracteristicas{    font-family: Montserrat-Regular;
+   font-size: 14px;
+   color: gray;
+   line-height: 1.4;
+   padding-right: 5%;
+   padding-left: 5%;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+
+
+.tablaps tr .title   {
+   width:20%;
+}
+
+.tablaps tr .description   {
+   width:45%;
+}
+
+.tablaps .impar td a:link  {
+   text-decoration:none;
+   color:#465686;
+}
+
+.tablaps .par td a:link    {
+   text-decoration:none;
+   color:#465686;
+   font-weight:bold;
+}
+
+.tablaps .impar td a:visited {
+   text-decoration:none;
+   color:#667799;
+}
+
+.tablaps .par td a:visited   {
+   text-decoration:none;
+   color:#667799;
+   font-weight:bold;
+}
+
+.tablaps .impar td a:hover   {
+   text-decoration:underline;
+   color:#2636B6;
+}
+.tablaps .par td a:hover       {
+   text-decoration:underline;
+   color:#2636B6;
+   font-weight:bold;
+}
