@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>Libros de la base de datos</title>
+    <title>Libros de la base de datos</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -23,9 +23,9 @@
     <?php
     //Creando una nueva instancia del objeto de conexión
     //a la base de datos
-    @$db = new mysqli('localhost', 'root', '', 'libros');
-    //@$db =
-    mysqli_connect('localhost', 'lisfet', 'tecnologico', 'libros');
+
+    @$db = new mysqli('localhost', 'root', '', 'libros','3307');
+    //@$db = mysqli_connect('localhost', 'lisfet', 'tecnologico', 'libros');
     if (mysqli_connect_errno()) {
         $msgerror = "Error: no se puede conectar a la base de datos. ";
         $msgerror .= "Contacte con soporte para resolver el problema.";

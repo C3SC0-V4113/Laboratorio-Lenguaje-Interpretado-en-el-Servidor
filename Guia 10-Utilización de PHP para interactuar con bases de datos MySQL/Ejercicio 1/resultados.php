@@ -28,11 +28,9 @@
                     //Asignando los datos ingresados en el formulario
                     //a variables locales con nombres cortos
                     $tema = $_POST['tema'];
-                    $termino = isset($_POST['termino']) ?
-                        $_POST['termino'] : "";
+                    $termino = isset($_POST['termino']) ? $_POST['termino'] : "";
                     $termino = trim($termino);
-                    $tipobusqueda = isset($_POST['tipobusqueda'])
-                        ? $_POST['tipobusqueda'] : "";
+                    $tipobusqueda = isset($_POST['tipobusqueda']) ? $_POST['tipobusqueda'] : "";
                     if (empty($tema) || empty($termino)) {
                         $msg = "No se ha ingresado detalle de la búsqueda. ";
                         $msg .= "Regrese al formulario e ingrese los datos en el formulario.<br>";
@@ -45,12 +43,7 @@
                     }*/
                     //Estableciendo la conexión con el servidor MySQL y
                     //verificando si no se ha producido un error
-                    @$db = new mysqli(
-                        'localhost',
-                        'root',
-                        '',
-                        'libros'
-                    );
+                    @$db = new mysqli('localhost', 'root', '', 'libros','3307');
                     if (mysqli_connect_errno()) {
                         $msgerror = "Error: no se puede conectar a la base de datos. ";
                         $msgerror .= "Contacte con soporte para resolver el problema.";
@@ -67,8 +60,7 @@
                             . $tema;
                         $consulta .= " LIKE '%" . $termino . "%'";
                     }
-                    echo "<div class=\"query\">\n\t<p>" .
-                        $consulta . "</p>\n\t";
+                    /*echo "<div class=\"query\">\n\t<p>" . $consulta . "</p>\n\t";*/
                     $resultc = $db->query($consulta);
                     $num_results = $resultc->num_rows;
                     echo "<p>Número de libros encontrados: . $num_results</p>\n</div>\n";

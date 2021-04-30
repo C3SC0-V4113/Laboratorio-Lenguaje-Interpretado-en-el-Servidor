@@ -52,7 +52,7 @@
             }*/
             //Conectando con el servidor MySQL y seleccionando
             //la base de datos con la que se trabajará
-            @$db = new mysqli('localhost', 'root', '', 'libros');
+            @$db = new mysqli('localhost', 'root', '', 'libros','3307');
             //@$db = new mysqli('localhost','tecnologico','fetudb','libros');
             //Establecer el conjunto de caracteres a utf8
             $db->set_charset("utf8");

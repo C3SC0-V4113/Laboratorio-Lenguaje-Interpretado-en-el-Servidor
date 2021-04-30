@@ -1,4 +1,5 @@
-<?php @$db = new mysqli('localhost', 'root', '', 'libros');
+<?php 
+@$db = new mysqli('localhost', 'root', '', 'libros','3307');
 //@$db = new mysqli('localhost','tecnologico','fetudb','libros');
 //Establecer el conjunto de caracteres a utf8
 $db->set_charset("utf8");
@@ -20,7 +21,5 @@ $preg .= "titulo = " . $row['titulo'] . ",";
 $preg .= "precio = " . $row['precio'] . ".";
 $msg .= "if(confirm(\"" . $preg . "\")){";
 $msg .= "location.href=\"mostrarlibros.php?opc=eliminar&del=s&id=" . $isbn . "\";}";
-$msg .=
-    "else{location.href=\"mostrarlibros.php?opc=eliminar&del=n\";}</sc
-ript>";
+$msg .="else{location.href=\"mostrarlibros.php?opc=eliminar&del=n\";}</script>";
 echo utf8_decode($msg);

@@ -26,12 +26,7 @@
             <?php
                     //Creando una nueva instancia del objeto de conexión
                     //a la base de datos
-                @$db = new mysqli(
-                    'localhost',
-                    'root',
-                    '',
-                    'libros'
-                );
+                    @$db = new mysqli('localhost', 'root', '', 'libros','3307');
                     //@$db = new mysqli('localhost','tecnologico','fetudb','libros');
                 if (mysqli_connect_errno()) {
                     $msgerror = "Error: no se puede conectar a la base de datos";
