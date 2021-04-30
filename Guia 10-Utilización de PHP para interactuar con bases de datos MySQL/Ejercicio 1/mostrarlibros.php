@@ -23,9 +23,7 @@
     <?php
     //Creando una nueva instancia del objeto de conexión
     //a la base de datos
-
     @$db = new mysqli('localhost', 'root', '', 'libros','3307');
-    //@$db = mysqli_connect('localhost', 'lisfet', 'tecnologico', 'libros');
     if (mysqli_connect_errno()) {
         $msgerror = "Error: no se puede conectar a la base de datos. ";
         $msgerror .= "Contacte con soporte para resolver el problema.";
@@ -57,13 +55,7 @@
             echo $msg;
             exit(0);
         }
-        /*if (!get_magic_quotes_gpc()) {
-            $isbnx = addslashes($isbnx);
-            $isbn = addslashes($isbn);
-            $autor = addslashes($autor);
-            $titulo = addslashes($titulo);
-            $precio = doubleval($precio);
-        }*/
+
         //Creando la consulta de actualización con los datos
         //enviados del formulario de modificación de libros
         $consulta = "UPDATE libros SET isbn='" . $isbn . "', autor='" . $autor;
@@ -115,9 +107,7 @@
     </thead>
     <tbody>";
     while ($row = $resultc->fetch_assoc()) {
-        echo "<tr class=\"normal\"
-onmouseover=\"this.className='selected'\"
-onmouseout=\"this.className='normal'\">";
+        echo "<tr class=\"normal\" onmouseover=\"this.className='selected'\" onmouseout=\"this.className='normal'\">";
         echo "<td scope='col'>";
         echo "" . $row['isbn'] . "";
         echo "</td><td scope='col'>";
@@ -145,10 +135,8 @@ onmouseout=\"this.className='normal'\">";
     echo "</table>";
     ?>
     <hr class="d-lg-none divider">
-    <a href="menuopciones.html" class="d-block h3
-font-weight-normal">Regresar<br>
-        <small class="d-block text-muted
-text-small">Menu</small>
+    <a href="menuopciones.html" class="d-block h3 font-weight-normal">Regresar<br>
+        <small class="d-block text-muted text-small">Menu</small>
     </a>
 </body>
 

@@ -1,6 +1,5 @@
 <?php 
 @$db = new mysqli('localhost', 'root', '', 'libros','3307');
-//@$db = new mysqli('localhost','tecnologico','fetudb','libros');
 //Establecer el conjunto de caracteres a utf8
 $db->set_charset("utf8");
 if (mysqli_connect_errno()) {
@@ -14,7 +13,7 @@ $sql = "SELECT * FROM libros WHERE isbn = '" . $isbn . "'";
 $result = $db->query($sql);
 $row = $result->fetch_assoc();
 $msg = "<script text=\"text/javascript\">\n";
-$preg = "Deseas eliminar el libro de: isbn = ";
+$preg = "Deseas eliminar el libro de: ";
 $preg .= "isbn = " . $row['isbn'] . ",";
 $preg .= "autor = " . $row['autor'] . ",";
 $preg .= "titulo = " . $row['titulo'] . ",";

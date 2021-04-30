@@ -11,7 +11,6 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/links.css" />
-    <!-- <link rel="stylesheet" href="css/libros.css" /> -->
     <script src="js/modernizr.custom.lis.js"></script>
 </head>
 
@@ -44,16 +43,10 @@
                 echo $msg;
                 exit(0);
             }
-            /*if (!get_magic_quotes_gpc()) {
-                $isbn = addslashes($isbn);
-                $autor = addslashes($autor);
-                $titulo = addslashes($titulo);
-                $precio = doubleval($precio);
-            }*/
             //Conectando con el servidor MySQL y seleccionando
             //la base de datos con la que se trabajará
             @$db = new mysqli('localhost', 'root', '', 'libros','3307');
-            //@$db = new mysqli('localhost','tecnologico','fetudb','libros');
+
             //Establecer el conjunto de caracteres a utf8
             $db->set_charset("utf8");
             if (mysqli_connect_errno()) {
@@ -66,6 +59,11 @@
             //el nuevo registro a la base de datos
             $planconsulta = "INSERT INTO libros (isbn, autor, titulo, precio) ";
             $planconsulta .= "VALUES (?, ?, ?, ?)";
+            /**
+             * Se crea una sentencia establecida con los signos de interrogacion
+             * Estos serán llenados usando blind param, la cual se ejecuta
+             * y despues se cierra para guardar recursos
+             */
             $sentencia = $db->prepare($planconsulta);
             $sentencia->bind_param(
                 "sssd",
@@ -79,15 +77,7 @@
             echo $sentencia->affected_rows . " libro(s) agregado(s) a la base de datos\n";
             echo "</p>\n</div>\n";
             $sentencia->close();
-            /*
-            $consulta = "INSERT INTO libros (isbn, autor, titulo, precio)
-            ";
-            $consulta .= "VALUES ('" . $isbn . "', '" . $autor . "', '" .
-            $titulo . "', " . $precio . ")";
-            $resultc = $db->query($consulta);
-            if($resultc){
-            echo $db->affected_rows . " libro agregado a la base de
-            datos."; } */
+
             //Cerrar la conexión
             $db->close(); ?> <br />
             <hr class="d-lg-none divider">

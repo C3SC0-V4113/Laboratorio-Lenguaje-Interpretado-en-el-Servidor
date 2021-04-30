@@ -27,7 +27,6 @@
                     //Creando una nueva instancia del objeto de conexión
                     //a la base de datos
                     @$db = new mysqli('localhost', 'root', '', 'libros','3307');
-                    //@$db = new mysqli('localhost','tecnologico','fetudb','libros');
                 if (mysqli_connect_errno()) {
                     $msgerror = "Error: no se puede conectar a la base de datos";
                     $msgerror .= "Contacte con soporte para resolver el problema";
@@ -60,43 +59,7 @@
                     </div>
                     <div> <input type="submit" class="btn btn-primary" name="guardar" value="Guardar" /> </div>
                 </form>
-            <!-- <form action="mostrarlibros.php?id=
-            <?/*php echo $_GET['id']*/ ?>" method="POST">
-<fieldset> <legend><span>Modificar la información de
-un libro</span>
-</legend>
-<ul>
-<li>
-<label for="isbn" class="item">ISBN: </label><div class="campo">
-<input type="text" name="isbn" value="<?php /*echo $row['isbn']*/ ?>" size="18" maxlength="18" placeholder="ISBN"
-/>
-</div>
-</li>
-<li>
-<label for="autor" class="item">Autor: </label>
-<div class="campo">
-<input type="text" name="autor" value="<?php /*echo $row['autor']*/ ?>" size="36" maxlength="50"
-placeholder="Autor" />
-</div>
-</li>
-<li>
-<label for="titulo" class="item">Título: </label>
-<div class="campo">
-<input type="text" name="titulo" value="<?php /*echo $row['titulo']*/ ?>" size="36" maxlength="60"
-placeholder="T&iacute;tulo" />
-</div> </li> <li>
-<label for="precio" class="item">Precio:
-</label>
-<div class="campo">
-<input type="text" name="precio"
-value="<?php /*echo $row['precio']*/ ?>" size="6" maxlength="6"
-placeholder="Precio" />
-</div>
-</li>
-<li>
-<div class="boton">
-<input type="submit" name="guardar" value="Guardar"
-/> </div> </li> </ul> </fieldset> </form> -->
+                
             <hr class="d-lg-none divider">
             <a href="mostrarlibros.php?opc=modificar" class="d-block h3 font-weight-normal">
                 Volver<br>
