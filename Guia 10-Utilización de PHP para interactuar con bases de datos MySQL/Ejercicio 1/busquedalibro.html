@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...::: Formulario de búsqueda :::...</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery === 'undefined') {
+            var e = document.createElement("script");
+            e.src = "js/modernizr.custom.lis.js";
+            e.type = "text/javascript";
+            document.getElementsByTagName("head")[0].appendChild(e);
+        }
+    </script>
+</head>
+
+<body class="container">
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="navbar-text">
+                <h1>Búsqueda de libro</h1>
+            </span>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <form action="resultados.php" method="POST" class="formoid-solid-purple">
+                <div class="form-group">
+                    <label class="title"></label>
+                    <div class="item-cont">
+                        <div class="large">
+                            <span> 
+                                <select class="form-control" name="tema">
+                                    <option value="autor">Autor</option>
+                                    <option value="titulo">Título</option>
+                                    <optionvalue="isbn">ISBN</option>
+                                </select> 
+                                <i></i> 
+                                <span class="icon-place"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-input form-group">
+                    <label class="title"></label>
+                    <div class="item-cont">
+                        <input class="form-control" type="text" name="termino" placeholder="Término de búsqueda" class="large"/>
+                        <span class="icon-place"></span>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <label class="title">Tipo de búsqueda:</label>
+                    <div class="column column1">
+                        <input class="form-check-input" type="checkbox" name="tipobusqueda" value="exacta" />
+                        <label class="form-check-label">
+                            <span>Búsqueda exacta</span> </label>
+                    </div> <span class="clearfix"></span>
+                </div>
+                <div class="submit"> <input class="btn btn-primary" type="submit" name="enviar" value="Buscar" /> </div>
+            </form>
+            <hr class="d-lg-none divider">
+            <a href="menuopciones.html" class="d-block h3 font-weight-normal">Regresar<br>
+                <small class="d-block text-muted text-small">Menu</small>
+            </a>
+        </article>
+    </section>
+</body>
+
+</html>

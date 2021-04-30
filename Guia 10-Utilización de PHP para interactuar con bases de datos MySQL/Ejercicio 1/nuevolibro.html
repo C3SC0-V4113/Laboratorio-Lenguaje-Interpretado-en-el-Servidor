@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...::: Nuevo libro :::...</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/links.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery === 'undefined') {
+            var e = document.createElement("script");
+            e.src = "js/modernizr.custom.lis.js";
+            e.type = "text/javascript";
+            document.getElementsByTagName("head")[0].appendChild(e);
+        }
+    </script>
+</head>
+
+<body class="container">
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="navbar-text">
+                <h1>Nuevo libro</h1>
+            </span>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <form action="insertarlibro.php" method="POST">
+                <div class="element-number form-group">
+                    <label class="title"></label>
+                    <div class="item-cont">
+                        <input type="text" name="isbn" placeholder="ISBN" maxlength="18" class="form-control" />
+                        <span class="icon-place"></span>
+                    </div>
+                </div>
+                <div class="element-name form-group">
+                    <label class="title"></label>
+                    <div class="nameFirst">
+                        <input type="text" name="autor" placeholder="Autor del libro" maxlength="50"
+                            class="form-control" />
+                        <span class="icon-place"></span>
+                    </div>
+                </div>
+                <div class="element-input form-group">
+                    <label class="title"></label>
+                    <div class="item-cont">
+                        <input type="text" name="titulo" placeholder="Título del libro" maxlength="70"
+                            class="form-control" />
+                        <span class="icon-place"></span>
+                    </div>
+                </div>
+                <div class="element-number form-group">
+                    <label class="title"></label>
+                    <div class="item-cont">
+                        <input type="text" name="precio" placeholder="Precio del libro" maxlength="8"
+                            class="form-control" />
+                        <span class="icon-place"></span>
+                    </div>
+                </div>
+                <input class="btn btn-primary " type="submit" name="enviar" value="Agregar" />
+            </form>
+            <hr class="d-lg-none divider">
+            <a href="menuopciones.html" class="d-block h3 font-weight-normal">Regresar<br>
+                <small class="d-block text-muted text-small">Menu</small>
+            </a>
+        </article>
+    </section>
+</body>
+
+</html>
