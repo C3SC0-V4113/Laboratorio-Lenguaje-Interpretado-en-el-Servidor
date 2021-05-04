@@ -1,0 +1,627 @@
+/*  =====================================
+    1. FUENTES IMPORTADAS DE GOOGLE FONTS
+    =====================================  */
+/* Lobster font for headings */
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+/* Lato font for the content */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+/* Roboto font for the header */
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+/* Entypo pictograms by Daniel Bruce  www.entypo.com */
+@charset "utf-8";
+@font-face {
+	font-family: 'entypo';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/entypo.eot');
+	src: url('../fonts/entypo.eot?#iefix') format('eot'), 
+         url('../fonts/entypo.woff') format('woff'), 
+         url('../fonts/entypo.ttf') format('truetype'), 
+         url('../fonts/entypo.svg#entypo') format('svg');
+}
+
+/*  ===================
+    2. RESETEAR ESTILOS
+    ===================  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+
+
+/* Estilos para el encabezado */
+#demo h1 { 
+	height: 80px;
+	line-height: 70px;
+	font-family: "Century Gothic", "Helvetica", sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+.demo1 { 
+	/* Darker text on medium background */
+	color: #ffffff;
+	background-color: #214660;
+	text-shadow: 0px -1px 0px rgba(255,255,255,.5);
+	/* 50% white from top */
+}
+
+#slick .resp {
+    color:#214660;
+    font-family: Arial,Helvetica,"Liberation Sans";
+    font-size: 32px;
+    font-weight: Bold;
+    text-shadow:-1px -1px gray,
+                1px 1px #666;
+
+}
+
+#slick * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	font-family: 'Lato', Arial, Helvetica, sans-serif; 
+	vertical-align: baseline;
+	line-height: normal;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#slick label {
+	cursor: pointer;
+}
+
+#slick input[type="radio"],
+#slick input[type="checkbox"] {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Colocar iconos para los campos typo number */
+#slick .entypo-base:before{
+    content:"\0394";
+}
+
+#slick .entypo-altura:before{
+    content:"\2207";
+}
+
+#slick a {
+	text-decoration: none;
+}
+
+#slick {
+	margin: 16px auto;
+	position: relative;
+	/* Ajustar este valor para cambiar ancho del formulario */
+	width: 612px; 
+}
+
+/*  ======================
+    3. Estilos principales
+    ======================  */
+#slick .contact-form {
+	background: #fff;
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+	padding: 30px;
+	-webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.7);
+	-moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.7);
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.7);
+}
+
+#slick .w-100,
+#slick .w-47,
+#slick .w-30 {
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+#slick .w-100 {
+	width: 100%;
+}
+
+#slick .w-47 {
+	width: 47%;
+}
+
+#slick .w-30 {
+	width: 30%;
+}
+
+#slick .mr-5 {
+	margin-right: 5%;
+}
+
+#slick .mr-6 {
+	margin-right: 6%;
+}
+
+#slick .mt-5 {
+	margin-top: 5px;
+}
+
+#slick .mt-10 {
+	margin-top: 10px;
+}
+
+#slick .mt-20 {
+	margin-top: 20px;
+}
+
+#slick .clrfx {
+	clear: both;
+	display: block;
+	width: 100%;
+	float: left;
+}
+
+
+/*  =====================
+    4. Elementos de texto
+    =====================  */
+/***** Encabezado *****/
+#slick .title {
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 32px;
+	color: #333;
+	line-height: normal;
+	display: inline-block;
+	float: left;
+}
+
+/***** Párrafos *****/
+#slick p.intro {
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	color: #bbb;
+	margin: 20px 0;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#slick p.intro b {
+	color: #FF2424;
+}
+
+#slick p.tick-text {
+	font-size: 10px;
+	color: #999;
+	display: inline-block;
+	float: left;
+	margin: 8px 0 0 10px;
+}
+
+/***** Ayudas textuales *****/
+#slick span.slick-tip {
+	width: auto;
+	height: auto;
+	white-space: nowrap;
+	padding: 10px;
+	font-size: 10px;
+	text-align: center;
+	color: #fff;
+	background: #333;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+
+#slick span.slick-tip.right {
+	right: -30px;
+	bottom: 36px;
+	background: #fff;
+	color: #222;
+}
+
+#slick span.slick-tip.left {
+	left: 20px;
+	top: -44px;
+}
+
+#slick span.slick-tip:before {
+	content: "";
+	position: absolute;
+	bottom: -6px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 6px solid rgba(51,51,51,1);
+}
+
+#slick span.slick-tip.right:before {
+	right: 30px;
+	margin-left: -10px;
+}
+
+#slick span.slick-tip.right:before {
+	border-top: 6px solid rgba(255,255,255,1);
+}
+
+#slick span.slick-tip.left:before {
+	left: 20px;
+	margin-right: -10px;
+}
+
+#slick input:focus ~ .slick-tip,
+#slick select:focus ~ .slick-tip,
+#slick textarea:focus ~ .slick-tip,
+#slick .sb a:hover span.slick-tip {
+	opacity: 1;
+	visibility: visible;
+	z-index: 9999;
+}
+
+#slick input:required:valid ~ .slick-tip,
+#slick textarea:required:valid ~ .slick-tip {
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+
+/*  ==================
+    5. ELEMENTOS INPUT
+    ==================  */
+/***** Principal *****/
+#slick .field {
+	position: relative;
+	width: 100%;
+	clear: both;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#slick .field span.icon {
+	background: #ddd;
+	left: 0;
+	color: #fff;
+	font-size: 16px;
+	line-height: 40px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 38px;
+}
+
+#slick .field input,
+#slick .field textarea,
+#slick .field select {
+	border: solid 1px #ddd;
+	color: #333;
+	float: left;
+	font-size: 12px;
+	padding: 12px 20px 10px 50px;
+	width: 100%;
+}
+
+#slick .field textarea {
+	max-height: 146px;
+	height: 146px;
+	resize: none;
+	overflow: auto;
+}
+
+#slick .field textarea.message {
+	height: 159px;
+	max-height: 159px;
+}
+
+#slick .field textarea:focus {
+	height: 200px;
+	max-height: 200px;
+}
+
+#slick .field > input:hover,
+#slick .field > input:focus,
+#slick .field > select:hover,
+#slick .field > select:focus,
+#slick .field > textarea:hover,
+#slick .field > textarea:focus{
+	border: solid 1px #333;
+	outline: none;
+}
+#slick input:hover ~ span.icon,
+#slick input:focus ~ span.icon,
+#slick select:hover ~ span.icon,
+#slick select:focus ~ span.icon,
+#slick textarea:hover ~ span.icon,
+#slick textarea:focus ~ span.icon {
+	outline: none;
+	background: #333;
+}
+
+/***** Select input *****/
+#slick .field select {
+	background: none;
+	background-color: rgba(0,0,0,0);
+	height: auto;
+	z-index: 2;
+	padding-left: 47px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#slick select.grayed {
+	color: #999;
+}
+
+#arrow-select,
+#arrow-select-svg {
+	background: #fff url('../img/select.png') no-repeat 0 11px;
+	width: 44px;
+	height: 35px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	pointer-events: none;
+	vertical-align: middle;
+	outline: none;
+	border: none;
+	z-index: 3;
+}
+
+#slick select:hover ~ #arrow-select,
+#slick select:focus ~ #arrow-select,
+#slick select:hover ~ #arrow-select-svg,
+#slick select:focus ~ #arrow-select-svg {
+	background: #fff url('../img/select-focus.png') no-repeat 0 11px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#arrow-select-svg {
+		/* Esconde flechas svg en navegadores webkit e IE 9 y 10 
+		(elementos apuntadores no funcionan en estos navegadores) */
+		display: none; 
+	}
+}
+
+x:-o-prefocus, #arrow-select {
+	display: none; /* Hack para Opera 12 */
+}
+
+/***** Placeholders *****/
+/*-- Webkit --*/
+#slick input::-webkit-input-placeholder,
+#slick textarea::-webkit-input-placeholder {
+	color: #999;
+}
+
+#slick input:focus::-webkit-input-placeholder,
+#slick textarea:focus::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+/*-- Firefox 19 down --*/
+#slick input:-moz-placeholder,
+#slick textarea:-moz-placeholder {
+	color: #999;
+}
+
+#slick input:focus:-moz-placeholder,
+#slick textarea:focus:-moz-placeholder {
+	color: #ccc;
+}
+
+/*-- Firefox 19 up --*/
+#slick input::-moz-placeholder,
+#slick textarea::-moz-placeholder {
+	color: #999;
+}
+
+#slick input:focus::-moz-placeholder,
+#slick textarea:focus::-moz-placeholder {
+	color: #ccc;
+}
+
+/*-- IE 10+ --*/
+#slick input:-ms-input-placeholder,
+#slick textarea:-ms-input-placeholder {
+	color: #999;
+}
+
+#slick input:focus:-ms-input-placeholder,
+#slick textarea:focus:-ms-input-placeholder {
+	color: #ccc;
+}
+
+/*-- IE 9 --*/
+#slick .ie9-placeholder {
+	color: #999 !important;
+}
+
+#slick .ie9-placeholder:focus {
+	color: #ccc !important;
+}
+
+/***** Validations *****/
+#slick .field input:required,
+#slick .field textarea:required,
+#slick .field select:required {
+	background: #fff url(../img/required.png) no-repeat 100% 15px;
+	outline: none;
+	box-shadow: none;
+}
+#slick .field input:hover:invalid,
+#slick .field textarea:hover:invalid,
+#slick .field select:hover:invalid {
+	background: #fff url(../img/focused.png) no-repeat 100% 15px;
+	outline: none;
+	box-shadow: none;
+}
+#slick .field input:required:valid,
+#slick .field textarea:required:valid,
+#slick .field select:required:valid {
+	background: #fff url(../img/valid.png) no-repeat 100% 15px;
+	outline: none;
+	box-shadow: none;
+}
+#slick .field input:focus:invalid,
+#slick .field textarea:focus:invalid,
+#slick .field select:focus:invalid {
+	background: #fff url(../img/invalid.png) no-repeat 100% 15px;
+	outline: none;
+	box-shadow: none;
+}
+
+/***** Send button *****/
+#slick input.send {
+	background: #214660;
+	border: none;
+	clear: none;
+	color: #fff;
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	margin-right: 10px;
+	outline: none;
+	padding: 6px 28px;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+}
+
+#slick input.send:hover,
+#slick input.send:focus {
+	border: none;
+	outline: none;
+	background: #333;
+	cursor: pointer;
+}
+
+/***** Tick checkboxes *****/
+
+#slick label.tick {
+	display: inline-block;
+	float: left;
+	position: relative;
+	width: auto;
+}
+
+#slick label.tick:before {
+	background: #fff;
+	border: solid 2px #ddd;
+	content: "";
+	display: inline-block;
+	height: 16px;
+	position: absolute;
+	width: 16px;
+}
+
+#slick label.tick:after {
+	opacity: 0;
+	visibility: hidden;
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 4px;
+	background: transparent;
+	top: 6px;
+	left: 5px;
+	border: 2px solid #333;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#slick input:checked + label.tick:after {
+	opacity: 1;
+	visibility: visible;
+}
+
+#slick label.tick span {
+	font-size: 11px;
+	color: #999;
+	padding-left: 26px;
+}
+
+#slick label.tick:hover span {
+	color: #333;
+}
+
+/*  ==================
+    6. TRANSITIONS
+    ==================  */
+#slick a,
+#slick label,
+#slick input,
+#slick select,
+#slick textarea,
+#slick span.slick-tip,
+#slick input ~ span.icon,
+#slick select ~ span.icon,
+#slick textarea ~ span.icon {
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+/*  ==================
+    7. MEDIA QUERIES
+    ==================  */
+/***** Max width 480px *****/
+@media screen and (max-width:480px) {
+	#slick {
+		width: 100%;
+	}
+	#slick .w-47,
+	#slick .w-30 {
+		width: 100%;
+	}
+	#slick .mr-6,
+	#slick .mr-5 {
+		margin-right: 0;
+	}
+	#slick .map {
+		margin-top: 20px;
+	}
+	#slick .w-30,
+	#slick .mr-5 {
+		margin-bottom: 20px;
+	}
+	#slick .field input,
+	#slick .field textarea,
+	#slick .field select {
+		font-size: 16px;
+	}
+	#slick p.intro {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	#slick input.send {
+		width: 100%;
+		padding: 12px;
+		float: left;
+		clear: both;
+		font-size: 16px;
+	}
+}

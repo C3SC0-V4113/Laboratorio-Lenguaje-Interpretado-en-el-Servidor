@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+body{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #143959;
+    color: #fff;
+}
+header{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+section{
+    background-color: #27d3a8;
+    color: #fff;
+    margin: auto;
+    padding: 50px;
+    width: 75%;
+    border-radius: 15px;
+}
+#palabra{
+    margin-top: 15px;
+    height: 25px;
+    width: 315px;
+}
+#agregar{
+    background-color: #f9e3a2;
+}
+.submit{
+    margin-top: 25px;
+}
+.botonform{
+    background-color: #eeee;
+    color: #303841;
+    width: 100px;
+    height: 30px;
+    border: 0px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+#enviar{
+    background-color: #f9e3a2;
+}
+table{
+    width: 100%;
+    border-radius: 15px;
+    background-color: #143959;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+tr:nth-child(odd){
+    background-color: #1f7396;
+}
+tr:first-child th:first-child{
+    border-top-left-radius: 15px;
+}
+tr:first-child th:last-child{
+    border-top-right-radius: 15px;
+}
+tr:last-child th:first-child{
+    border-bottom-left-radius: 15px;
+}
+tr:last-child th:last-child{
+    border-bottom-right-radius: 15px;
+}
+input{
+    width: 250px;
+}
+#button{
+    margin-top: 50px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f9e3a2;
+    color: #303841;
+    border-radius: 4px;
+    border: 2px solid #807f7c;
+}
+#ingresados{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#nota3{
+    margin-bottom: 20px;
+}
+.lista{
+    margin-top: 20px;
+}
+@media (min-width: 620px){
+    #nota1{
+        margin-left: 89px;
+    }
+    #nota2{
+        margin-left: 38px;
+    }
+    #nota3{
+        margin-left: 31px;
+        margin-bottom: 20px;
+    }
+    #nombre{
+        margin-left: 25px;
+    }
+}
+.DivNumerico{
+    margin-bottom: 25px;
+}
+.nulo{
+    margin-bottom: 25px;
+}
+span{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #143959;
+}
+#mayor{
+    background-color: red;
+}
+#menor{
+    background-color: blue;
+}
+footer{
+    background-color: #27d3a8;
+    color: #fff;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+    width: 75%+10px;
+    border-radius: 15px;
+}
+footer p{
+    padding: 15px;
+}

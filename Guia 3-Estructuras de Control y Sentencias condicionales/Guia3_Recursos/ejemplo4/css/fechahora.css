@@ -1,0 +1,71 @@
+*             {
+    margin: 0;
+    padding: 0;
+}
+
+html, body    {
+    height: 100%;
+}
+
+body          {
+    background-image: url(../img/windows-10_fucsia.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-size: 16px;
+}
+
+section        {
+    display: flex;
+    flex-direction: row;
+}
+
+.box          {
+    background-color: white; 
+    border-radius: 5px;
+    float: left;
+    height: 200px;
+    margin: 12.5px 10px;
+    width: 46%;
+}
+
+.box3         {
+    background-color: #9EEBA1;
+    color:#064020; 
+    font-family: Georgia,Times,serif; 
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+
+.box4 {
+    background-color: #9EEBBF;
+    color:#096040; 
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif; 
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+
+.shadow3, .shadow4 {
+    box-shadow: 6px 6px 3px 0px rgba(66,66,66,0.9);
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.shadow3 p, .shadow4 p {
+    border: 2px dashed #F7EEEE;
+    border-radius: 5px;
+    height: 100px;
+    margin-left: 6%;
+    margin-top: 6%;
+    width: 87%;
+}
+
+@media screen and (max-width: 720px) {
+    section       {
+        flex-direction: column;
+    }
+
+    .box          {
+        width: 96%;
+    }
+}

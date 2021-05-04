@@ -1,0 +1,100 @@
+body  {
+   font-size: 16px;
+}
+
+h1  {
+   color: rgb(30,30,60);
+   font: Bold 2.5em "Century Gothic","Arial Rounded",Helvetica,sans-serif;
+   text-align: center;
+   text-shadow: 4px 4px 2px rgba(20, 20, 90, 0.7);
+}
+
+fieldset {
+   width:32%;
+   position:relative;
+   margin-left:50%;
+   left:-16%;
+   background-color:rgb(190,220,230);
+   border:6px ridge rgb(50,100,150);
+}
+
+legend span {
+   display:block;
+   border:3px ridge rgb(50,100,150);
+   background-color:rgb(20,20,100);
+   font:bold 9pt "Century Gothic","Arial Rounded MT Bold",Helvetica,sans-serif;
+   color:rgb(225,250,250);
+   padding:2px 5px;
+}
+
+label {
+   font:normal 9pt "Arial Rounded MT Bold","Century Gothic",Helvetica,sans-serif;
+   color:rgb(30,60,100);
+   display:block;
+   float:left;
+   width:40%;
+   text-align:right;
+   padding-top:0.6em;
+   padding-bottom:0.6em;
+}
+
+ul {
+   list-style-type:none;
+   margin:0;
+   padding:0;
+}
+
+li {
+   line-height:2.1em;
+   display:block;
+}
+
+#campo {
+   width:96%;
+   display:block;
+   position:relative;
+   float:right;
+}
+
+.text {
+   width:10%;
+   font:bold 9pt "Arial Rounded MT Bold",Helvetica,sans-serif;
+   color:MidnightBlue;
+   background-color:rgb(225,250,250);
+}
+
+#envio {
+   width:96%;
+   margin:0 auto;
+   display:block;
+   float:right;
+}
+
+.resp  {
+   background-color: rgb(200,225,250);
+   color: rgb(20,25,90);
+   -moz-border-radius: 8px;
+   -o-border-radius: 8px;
+   -webkit-border-radius: 8px;
+   border-radius: 8px; 
+   -moz-box-shadow: 3px 3px 2px 2px rgba(90, 90, 90, 0.5);
+   -webkit-box-shadow: 3px 3px 2px 2px rgba(90, 90, 90, 0.5);
+   -o-box-shadow: 3px 3px 2px 2px rgba(90, 90, 90, 0.5);
+   box-shadow: 3px 3px 2px 2px rgba(90, 90, 90, 0.5);
+   font: normal 1.2em Tahoma,Helvetica,sans-serif;
+   left: 50%;
+   margin-left: -6%;
+   padding: 10px 6px;
+   position: relative;
+   text-align: center;
+   width: 12%; 
+}
+
+.boton {
+   display:block;
+   width:5em;
+   margin-left:50%;
+   left:-2.5em;
+   bottom:-0.2em;
+   position:relative;
+}
