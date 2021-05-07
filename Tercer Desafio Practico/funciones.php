@@ -2,13 +2,18 @@
 function generarCarrito()
 {
     //Se utilizará una matriz para manejar el carrito
-    $carrito = array();
+    if (!isset($_SESSION['carrito'])) {
+        $carrito = array();
+    }
+    else{
+        $carrito=$_SESSION['carrito'];
+    }
     //Los artículos y sus cantidades se enviarán con el
     //método GET, ya sea en la cadena de consulta o a
     //través de campos ocultos de formulario
     foreach ($_GET as $ref => $unidades) {
         //echo $ref.'<br>'.$unidades.'<br>';
-        if (preg_match("/^ref/", $ref)){
+        if (preg_match("/^ref/", $ref)) {
             $carrito[$ref] = $unidades;
         }
     }
@@ -24,23 +29,24 @@ function mostrarCarrito($carrito)
     echo "<th>\nPrecio Completo</th>\n</tr>\n";
     //Mostramos el carrito
     $totalUnidades = 0;
-    $totalPrecio=0;
+    $totalPrecio = 0;
     if (empty($carrito)) {
         echo "<tr>\n<td align=\"center\" colspan=\"4\">\n";
         echo "El carrito está vacío\n</td>\n</tr>\n";
     } else {
-        $i=0;
+        $i = 0;
         foreach ($carrito as $ref => $unidades) {
-            $temp=explode(',',$ref);
-            $temp2[$temp[1]]=$temp[0];
-            echo "<tr >\n<td>\n".$temp[0]."</td>\n";
+            $temp = explode(',', $ref);
+            $temp2[$temp[1]] = $temp[0];
+            echo "<tr >\n<td>\n" . $temp[0] . "</td>\n";
             echo "<td align=\"center\">$unidades</td>";
-            echo "<td align=\"center\">".$temp[1]." €</td>\n";
-            echo "<td align=\"center\">".intval($temp[1])*intval($unidades)." €</td>\n</tr>\n";
-            $totalPrecio+=intval($temp[1])*intval($unidades);
+            echo "<td align=\"center\">" . $temp[1] . " €</td>\n";
+            echo "<td align=\"center\">" . intval($temp[1]) * intval($unidades) . " €</td>\n</tr>\n";
+            $totalPrecio += intval($temp[1]) * intval($unidades);
             $totalUnidades += $unidades;
         }
     }
+    $_SESSION['carrito']=$carrito;
     //Cerrar la tabla
     echo "<tr class='bg-light'><td align=\"center\" colspan=\"2\">\n";
     echo "Número de unidades: ";
